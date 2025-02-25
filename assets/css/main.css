@@ -4350,7 +4350,8 @@ body[data-aos-easing=ease] [data-aos] {
     align-items: center;
     justify-content: center; }
     .xb-testimonial .xb-item--img img {
-      border-radius: 100%; }
+   width: 60%;
+    }
   .xb-testimonial .xb-item--holder {
     transform: translateY(-6px); }
   .xb-testimonial .xb-item--title {
