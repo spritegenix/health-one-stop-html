@@ -1,0 +1,131 @@
+.xb-cta{
+    border-radius: 20px;
+    padding: 61px 0 70px 70px;
+    background: var(--color-primary);
+    width: auto;
+    @include respond(xs) {
+        padding: 40px 30px;
+    }
+    .xb-item {
+        &--title {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 38px;
+            color: var(--color-white);
+        }
+        &--content {
+            color: #d8e3f8;
+            padding: 25px 0 38px 0;
+            max-width: 458px;
+        }
+    }
+    &.cta-left {
+        margin-left: -70px;
+        @include respond(laptop) {
+            margin-left: 0;
+        }
+        @include respond(lg) {
+            margin-left: 0;
+        }
+    }
+    &.cta-right {
+        margin-right: -70px;
+        @include respond(laptop) {
+            margin-right: 0;
+        }
+        @include respond(lg) {
+            margin-right: 0;
+        }
+    }
+}
+.xb-cta-list {
+    list-style: none;
+    padding-bottom: 55px;
+    .list-title {
+        font-weight: 600;
+        font-size: 22px;
+        color: var(--color-white);
+        padding-bottom: 28px;
+        display: inline-block;
+    }
+    .cta-item {
+        color: var(--color-white);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        svg {
+            margin-right: 10px;
+        }
+    }
+}
+.cta-button {
+    a {
+        @include respond(xs) {
+            font-size: 16px;
+            padding: 22px 20px;
+        }
+    }
+    .thm-white {
+        background: var(--color-white);
+    }
+}
+.cta-box {
+    margin-right: -70px;
+    margin-left: -70px;
+    @include respond(laptop) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include respond(lg) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.cta-wrap {
+    padding: 60px 0 70px 70px;
+    border-radius: 20px;
+    margin-bottom: -148px;
+    z-index: 2;
+    @include respond(xs) {
+        padding: 50px 30px;
+    }
+    .xb-item {
+        &--title {
+            font-size: 34px;
+            line-height: 44px;
+            text-transform: capitalize;
+            color: var(--color-white);
+        }
+        &--sub-title {
+            font-size: 16px;
+            letter-spacing: -0.01em;
+            color: #d8e3f8;
+        }
+        &--img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include respond(lg) {
+                max-width: 450px;
+            }
+            @include respond(md) {
+                max-width: 300px;
+            }
+            @include respond(xs) {
+                display: none;
+            }
+        }
+    }
+    .cta-button {
+        .cta-btn {
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+}

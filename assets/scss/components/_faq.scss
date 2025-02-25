@@ -1,0 +1,151 @@
+.faq {
+    &__blockchain {
+        margin: 0 133px;
+        @include respond(lg) {
+            margin: 0 50px;
+        }
+        @include respond(md) {
+            margin: 0;
+        }
+        .accordion_box {
+            list-style: none;
+            .block {
+                background: var(--color-white);
+                box-shadow: 0 8px 15px 0 rgba(220, 220, 220, 0.25);
+                margin: 20px 0;
+                border-radius: 10px;
+                @include transition(.3s);
+                .acc-btn {
+                    padding-bottom: 17px;
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: var(--color-primary);
+                    position: relative;
+                    padding: 37px 20px;
+                    cursor: pointer;
+                    padding-top: 37px;
+                    padding-left: 48px;
+                    @include transition(.3s);
+                    @include respond(xs) {
+                        padding-left: 20px;
+                        padding-right: 50px;
+                        font-size: 18px;
+                    }
+                }
+                .acc_body {
+                    position: relative;
+                    display: none;
+                    &.current {
+                        display: block;
+                    }
+                }
+                .content {
+                    border-top: 0;
+                    padding-top: 0;
+                    padding-right: 45px;
+                    line-height: 28px;
+                    color: var(--color-primary);
+                    padding-left: 92px;
+                    padding-bottom: 35px;
+                    @include respond(xs) {
+                        padding-right: 30px;
+                        padding-left: 30px;
+                    }
+                }
+                .qus {
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: rgba(11, 57, 72, 0.5);
+                    padding-right: 13px;
+                }
+            }
+        }
+        .accordion.block.active-block {
+            background: var(--color-primary);
+            .content {
+                color: var(--color-white);
+            }
+            .qus {
+                font-weight: 600;
+                font-size: 22px;
+                color: var(--color-white);
+                opacity: 0.5;
+            }
+            .acc-btn {
+                color: var(--color-white);
+                padding-bottom: 22px;
+                .arrow {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50px;
+                    background: var(--color-yellow);
+                    &::after {
+                        opacity: 1;
+                    }
+                    span::before {
+                        opacity: 0;
+                    }
+                    span::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .acc-btn {
+            &::before,
+            &::after {
+                display: none;
+            }
+            &.active {
+                .arrow {
+                    &::after {
+                        opacity: 1;
+                    }
+                    span::before {
+                        opacity: 0;
+                    }
+                    span::after {
+                        opacity: 1;
+                    }
+                }
+            }
+            span {
+                margin: 0 !important;
+            }
+        }
+        .arrow {
+            position: absolute;
+            top: 48px;
+            right: 50px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background:  #f5f3f0;
+            @include transform(translateY(-50%));
+            @include respond(xs) {
+                right: 10px;
+            }
+            span {
+                &::before,
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    content: "\f067";
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 400;
+                    @include transform(translate(-50%, -50%));
+                    font-size: 13px;
+                    color: var(--color-primary);
+                }
+                &::after {
+                    content: "\f068";
+                    opacity: 0;
+                    z-index: 1;
+                    top: 48%;
+                }
+            }
+        }
+    }
+}
+

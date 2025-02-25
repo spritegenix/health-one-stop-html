@@ -1,0 +1,130 @@
+.thm-btn {
+    font-size: 18px;
+    color: var(--color-primary);
+	background: var(--color-yellow);
+    border-style: none;
+    padding: 22px 38px;
+    align-self: center;
+    position: relative;
+    line-height: 12px;
+    transition: all .2s cubic-bezier(.68,.01,.58,.75);
+    text-transform: capitalize;
+	display: inline-flex;
+	align-items: center;
+	letter-spacing: -0.02px;
+	@include border-radius(5px);
+	z-index: 1;
+	&:hover {
+		background-color: var(--color-primary);
+		@include transform(translateY(-2px));
+		color: var(--color-white);
+		svg {
+			@include transform(translateX(4px));
+			path {
+				fill: var(--color-white);
+			}
+		}
+	}
+	&.hover-white:hover {
+		background-color: var(--color-white);
+		color: var(--color-primary);
+		svg {
+			path {
+				fill: var(--color-primary);
+			}
+		}
+	}
+	&.hover-yellow:hover {
+		background-color: var(--color-yellow);
+		color: var(--color-primary);
+		svg {
+			path {
+				fill: var(--color-primary);
+			}
+		}
+	}
+	svg {
+		margin-left: 10px;
+		transition: all .3s cubic-bezier(.68,.01,.58,.75);
+		path {
+			transition: all .2s cubic-bezier(.68,.01,.58,.75);
+		}
+	}
+	&.donate-btn {
+		background: #0b3948;
+		color: var(--color-white);
+		padding: 17px 41px;
+		svg {
+			margin-right: 8px;
+			path {
+				@include transition(.3s);
+			}
+		}
+		&:hover {
+			svg {
+				@include transform(translateX(0));
+				path {
+					fill: var(--color-primary);
+				}
+			}
+		}
+	}
+	&--two {
+		font-weight: 500;
+		border-radius: 60px;
+	}
+	&--three {
+		font-weight: 500;
+		border-radius: 60px;
+		background: #1140c0;
+		color: var(--color-white);
+		&:hover {
+			background-color: var(--color-white);
+			color: var(--xb-track-color);
+			svg path {
+				fill: var(--xb-track-color);
+			}
+		}
+		svg path {
+			fill: var(--color-white);
+		} 
+	}
+	&.btn-main {
+		background-color: var(--color-primary);
+		color: var(--color-white);
+		svg path {
+			fill: var(--color-white);
+		}
+		&:hover {
+			background-color: var(--color-yellow);
+			color: var(--color-primary);
+			svg path {
+				fill: var(--color-primary);
+			}
+		}
+	}
+	&--three_btn {
+		font-weight: 500;
+		border-radius: 60px;
+		background: var(--color-white);
+		&:hover {
+			background-color: #1140c0;
+			
+		}
+	}
+	&--sc {
+		color: var(--color-white);
+		background-color: #006676;
+		padding: 24px 30px;
+		letter-spacing: -0.02em;
+		&:hover {
+			background-color: #5F2656;
+		}
+	}
+}
+.btns {
+	margin: -10px;
+	a {
+		margin: 10px;
+	}
+}

@@ -1,0 +1,89 @@
+.xb-process {
+    text-align: center;
+    padding-bottom: 44px;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 430px;
+    @include respond(md) {
+        padding: 0 20px 40px;
+        width: auto;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 72%;
+        opacity: 0;
+        border-radius: 10px 10px 0 0;
+        background:  #67a859;
+        z-index: -1;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        @include transition (.4s);
+    }
+    .xb-item {
+        &--img {
+            border-radius: 50%;
+            display: inline-block;
+            .number {
+                background: var(--color-white);
+                height: 50px;
+                width: 50px;
+                bottom: 0;
+                right: 0;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                color: var(--color-heading);
+                font-size: 26px;
+                line-height: 28px;
+            }
+        }
+        &--title {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 28px;
+            text-transform: capitalize;
+            @include transition (.4s);
+        }
+        &--text {
+            max-width: 298px;
+            display: inline-block;
+            color: var(--color-heading);
+            @include transition (.4s);
+        }
+    }
+    &:hover,
+    &.active {
+        &::after {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+        .xb-item {
+            &--title {
+                color: var(--color-white);
+            }
+            &--text {
+                color: var(--color-white);
+            }
+        }
+    }
+}
+.xb-process-wrap {
+    justify-content: center;
+    @include respond(laptop) {
+        flex-wrap: nowrap;
+    }
+    @include respond(lg) {
+        flex-wrap: nowrap;
+    }
+    @include respond(md) {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,94 @@
+.xb-feature {
+    border: 1px solid #f2f6ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 13px 0 #e9e9e4;
+    background: var(--color-white);
+    padding: 15px 70px;
+    padding-top: 0;
+    margin-left: -70px;
+    margin-right: -70px;
+    @include respond(laptop) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .xb-item {
+        &--holder {
+            margin-top: 15px;
+        }
+        &--icon {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background: #f7f5f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; 
+            &::before {
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+                border: 1px dashed var(--color-primary);
+                @include transition (.4s);
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        &--title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28px;
+            color: var(--color-heading);
+            padding-left: 10px;
+            text-transform: capitalize;
+        }
+    }
+    .xb-item--holder:hover {
+        .xb-item {
+            &--icon {
+                &::before {
+                    visibility: visible;
+                    opacity: 1;
+                    animation: spin 20s infinite linear;
+                    -webkit-animation: spin 20s infinite linear;
+                }
+            }
+        }
+    }
+}
+.xb-feature-two {
+    .xb-item {
+        &--inner {
+            box-shadow: 0 8px 15px 0 rgba(220, 220, 220, 0.25);
+            
+            background: #fff;
+            border-radius: 10px;
+            padding: 22px 31px 28px;
+        }
+        &--img {
+            padding-right: 52px;
+        }
+        &--holder {
+            transform: translateY(4px);
+        }
+        &--title {
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: -0.03em;
+            text-transform: capitalize;
+            color: var(--color-heading);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        &--text {
+            max-width: 195px;
+        }
+    }
+}
+.feature-img {
+    img {
+        @include border-radius(20px);
+    }
+}

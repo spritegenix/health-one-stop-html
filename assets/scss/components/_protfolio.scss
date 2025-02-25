@@ -1,0 +1,142 @@
+.xb-protfolio {
+    &:hover {
+        .xb-item--img img {
+            @include transform(scale(1.09));
+        }
+    }
+    .xb-item {
+        &--img {
+            overflow: hidden;
+            border-radius: 20px;
+            a {
+                width: 100%;
+                height: 498px;
+                display: inline-block;
+                @include respond(md) {
+                    height: 350px;
+                }
+            }
+            img {
+                @include transition(.3s);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &--holder {
+            padding-top: 27px;
+        }
+        &--title {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28px;
+            text-transform: capitalize;
+            color: var( --xb-track-color);
+            padding-bottom: 5px;
+            a {
+                color: currentColor;
+            }
+        }
+        &--text {
+            font-size: 14px;
+        }
+        &--arrow {
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-white);
+            box-shadow: 0 1px 6px 0 rgba(93, 106, 131, 0.25);
+            @include transition (.4s);
+        }
+    }
+    &:hover {
+        .xb-item {
+            &--arrow {
+                background:  #1140c0;
+                svg {
+                    filter: brightness(100);
+                }
+            }
+        }
+    }
+}
+.protfolio-shape {
+    .shape {
+        position: absolute;
+        z-index: -1;
+        &--one {
+            top: 308px;
+            left: 103px;
+        }
+        &--two {
+            bottom: 46%;
+            right: 108px;
+        }
+    }
+}
+.portfolio-pb {
+    padding-bottom: 471px;
+}
+.xb-protfolio-two:hover .xb-item--arrow {
+    background-color: var(--color-primary);
+    svg {
+        filter: unset;
+        path {
+            fill: var(--color-yellow);
+        }
+    }
+}
+.portfolio_details_info_list {
+	row-gap: 6px;
+	column-gap: 50px;
+    background-color: var(--color-primary);
+    padding: 40px 30px;
+    @include border-radius(20px);
+    li {
+        color: #D8E3F8;
+        font-size: 18px;
+        line-height: 30px;
+        strong {
+            font-weight: 500;
+            color: var(--color-white);
+            margin-right: 10px;
+        }
+    }
+}
+.portfolio-single {
+    &__content {
+        h3 {
+            font-size: 35px;
+            line-height: 50px;
+            margin-bottom: 40px;
+            text-transform: capitalize;
+        }
+        p {
+            margin-bottom: 40px;
+        }
+    }
+}
+.portfolio-singe {
+    &__list {
+        padding-right: 15%;
+        @include respond(lg) {
+            padding-right: 0;
+        }
+        li {
+            margin-top: 20px;
+            width: 50%;
+            font-size: 18px;
+            font-weight: 500;
+            @include respond(xs) {
+                width: 100%;
+            }
+            img {
+                margin-right: 6px;
+            }
+        }
+    }
+}

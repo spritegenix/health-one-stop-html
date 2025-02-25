@@ -1,0 +1,168 @@
+.section-title {
+    .sub-title{
+        color: var(--color-heading);
+        font-weight: 500;
+        line-height: 30px;
+        font-size: 12px;
+        padding: 0 10px;
+        margin-bottom: 18px;
+        display: inline-block;
+        text-transform: uppercase;
+        border-radius: 30px;
+        background: #fff;
+        box-shadow: 0 4px 13px 0 #e9e9e4;
+    }
+    .title {
+        color: var(--color-heading);
+        font-size: 54px;
+        letter-spacing: -0.02em;
+        line-height: 64px;
+        text-transform: capitalize;
+        display: inline-block;
+        @include respond(lg) {
+            font-size: 44px;
+            letter-spacing: -0.01em;
+            line-height: 56px;
+        }
+        @include respond(xs) {
+            font-size: 32px;
+            letter-spacing: 0;
+            line-height: 38.5px;
+        }
+        span {
+            z-index: 1;
+            svg {
+                position: absolute;
+                top: 0px;
+                left: -4px;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .content {
+        max-width: 571px;
+        line-height: 28px;
+    }
+    .sub-title-two {
+        color: var(--color-heading);
+        font-weight: 500;
+        font-size: 15px;
+        background: none;
+        box-shadow: none;
+        position: relative;
+        padding-left: 27px;
+        margin-bottom: 12px;
+        display: inline-block;
+        text-transform: uppercase;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            background-image: url(../img/icon/sub-icon.png);
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+    }
+    .title-two {
+        color: var(--color-white);
+        line-height: 60px;
+        @include respond(xs) {
+            line-height: 40px;
+        }
+    }
+    .content-two {
+        color: var(--color-white);
+        font-size: 20px;
+    }
+    &--three {
+        .sub-title {
+            color: var(--xb-track-color);
+            font-weight: 500;
+            font-size: 14px;
+            background: none;
+            box-shadow: none;
+            position: relative;
+            padding-left: 27px;
+            margin-bottom: 9px;
+            display: inline-block;
+            &::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                background-image: url(../img/icon/sub-icon02.png);
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: left center;
+            }
+        }
+        .title {
+            font-size: 54px;
+            line-height: 64px;
+            color: var(--xb-track-color);
+            @include respond(md) {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            @include respond(xs) {
+                font-size: 32px;
+                line-height: 40px;
+            }
+        }
+        .chg-title {
+            font-size: 70px;
+            line-height: 80px;
+            @include respond(lg) {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            @include respond(md) {
+                font-size: 35px;
+                line-height: 45px;
+            }
+        }
+        .content {
+            color: var(--color-default-two);
+            
+        }
+    }
+    &--md {
+        .title {
+            font-size: 45px;
+            line-height: 55px;
+            @include respond(md) {
+                font-size: 35px;
+                line-height: 45px;
+            }
+            @include respond(xs) {
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }
+    }
+}
+.title-senior-care {
+    .xb-heading {
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        text-transform: capitalize;
+        @include respond(lg) {
+            font-size: 45px;
+            letter-spacing: -0.02em;
+        }
+        @include respond(xs) {
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    p {
+        color: #656565;
+    }
+}

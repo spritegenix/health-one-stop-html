@@ -1,0 +1,171 @@
+.xb-career {
+    background-color: var(--color-white);
+    padding: 50px;
+    padding-top: 20px;
+    @include border-radius(10px);
+    @include respond(xs) {
+        padding: 30px;
+        padding-top: 0;
+    }
+    .xb-item {
+        &--holder {
+            p {
+                span {
+                    color: var(--color-primary);
+                }
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &--title {
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-family: var(--font-body);
+            margin-bottom: 17px;
+            @include respond(xs) {
+                font-size: 22px;
+            }
+        }
+        &--time {
+            margin-right: 10px;
+            margin-bottom: 70px;
+            display: inline-block;
+            @include respond(lg) {
+                margin-bottom: 30px;
+            }
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.career-single {
+    font-weight: 500;
+    &__content {
+        h2 {
+            font-size: 35px;
+            margin-bottom: 32px;
+            @include respond(xs) {
+                font-size: 28px;
+            }
+        }
+        h3 {
+            font-size: 30px;
+            margin-bottom: 32px;
+            @include respond(xs) {
+                font-size: 26px;
+            }
+        }
+        p {
+            &:not(:last-child) {
+                margin-bottom: 28px;
+            }
+        }
+        ul {
+            padding-left: 20px;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    &__list {
+        list-style: none;
+        padding-left: 0 !important;
+        li {
+            &:not(:last-child) {
+                margin-bottom: 13px;
+            }
+            span {
+                color: #191B1E;
+            }
+        }
+    }
+}
+.job-apply {
+    padding: 80px;
+    padding-top: 70px;
+    @include border-radius(20px);
+    background-color: var(--color-white);
+    @include respond(md) {
+        padding: 40px 30px;
+    }
+    &__holder {
+        h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+    }
+    &__form {
+        label {
+            font-size: 20px;
+            font-weight: 600;
+            color: #191B1E;
+            margin-bottom: 10px;
+        }
+        input,
+        textarea {
+            height: 60px;
+            background-color: #F7F5F2;
+            font-size: 16px;
+            border: 2px solid #EEE5E5;
+            @include border-radius(5px);
+            &:focus {
+                border-color: var(--color-primary);
+            }
+        }
+        textarea {
+            min-height: 154px;
+        }
+        .xb-field {
+            margin-bottom: 33px;
+        }
+        input[type="file"] {
+            border: 0;
+            padding: 0;
+            height: auto;
+            cursor: pointer;
+            background: transparent;
+        }
+        .xb-btn {
+            background-color: var(--color-primary);
+            &:hover {
+                background-color: #191B1E;
+            }
+        }
+    }
+}
+
+.input-filed-text {
+    span {
+        color: #191B1E;
+    }
+}
+.sc-career-content {
+    background-color: #FCF7F1;
+    padding: 80px 40px;
+    @include border-radius(32px);
+    height: 100%;
+    h2 {
+        font-size: 45px;
+        margin-bottom: 33px;
+        font-weight: 400;
+        @include respond(xs) {
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    p {
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
+.sc-career-btn a {
+    padding: 24px 75px;
+}

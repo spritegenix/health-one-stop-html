@@ -1,0 +1,60 @@
+.values-item {
+    .xb-item {
+        &--holder {
+            background-color: var(--color-white);
+            padding: 40px 70px;
+            @include border-radius(20px);
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            right: 0;
+            margin: 0 65px;
+            text-align: center;
+            @include respond(xs) {
+                position: unset;
+                margin: 0;
+                padding: 30px;
+                border-radius: 0;
+            }
+            p {
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: -0.02em;
+            }
+        }
+        &--title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: var(--font-body);
+        }
+    }
+    &__left {
+        @include border-radius(20px 0 0 20px);
+        overflow: hidden;
+    }
+    &__right {
+        @include border-radius(0 20px 20px 0);
+        overflow: hidden;
+    }
+    @include respond(lg) {
+        @include border-radius(20px);
+    }
+}
+.mlr--70 {
+    margin-left: -70px;
+    margin-right: -70px;
+    @include respond(lg) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.values-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    z-index: -1;
+}

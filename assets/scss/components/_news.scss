@@ -1,0 +1,195 @@
+.xb-news-wrap{
+    border-top: 1px solid #e8e4de;
+    border-bottom: 1px solid #e8e4de;
+    padding: 50px 0;
+}
+.xb-news {
+    position: relative;
+    &.xb-line {
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            right: 0;
+            top: 0;
+            background: #d9d9d9;
+            @include respond(md) {
+                display: none;
+            }
+        }
+    }
+    .xb-item {
+        &--img {
+            border-radius: 20px;
+            display: inline-block;
+            overflow: hidden;
+            img {
+                @include transition (.4s);
+            }
+        }
+        &--title {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 36px;
+            text-transform: capitalize;
+            max-width: 333px;
+            a {
+                color: currentColor;
+            }
+        }
+        &--button {
+            .news-btn {
+                color: var(--color-primary);
+                display: flex;
+                align-items: center;
+                span {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 100%;
+                    background: #fff;
+                    box-shadow: 0 1px 6px 0 rgba(93, 106, 131, 0.25);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 20px;
+                    @include transition (.4s);
+                    svg {
+                        @include transition (.4s);
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .xb-item {
+            &--img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            &--button {
+                .news-btn {
+                    span {
+                        background: var(--color-yellow);
+                        svg {
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.news-title {
+    text-align: center;
+}
+//home three
+.ec-news {
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 10px;
+    @include transition (0.4s);
+    &:hover {
+        .xb-item--img img {
+            @include transform(scale(1.06));
+        }
+    }
+    .xb-item {
+        &--img {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            @include border-radius(20px);
+            img {
+                @include transition(.3s);
+            }
+        }
+        &--cat {
+            font-size: 14px;
+            color: var(--color-white);
+            background: #06083c;
+            border-radius: 30px;
+            padding: 2px 20px;
+            position: absolute;
+            left: 30px;
+            top: -15px;
+            @include respond(lg) {
+                left: 20px;
+            }
+        }
+        &--holder {
+            padding-top: 40px;
+            padding-left: 30px;
+            padding: 40px 30px 30px;
+            position: relative;
+            @include respond(lg) {
+                padding: 40px 20px 30px;
+            }
+        }
+        &--left {
+            padding-right: 30px;
+        }
+        &--ad-text {
+            font-size: 16px;
+            padding-left: 9px;
+        }
+        &--title {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 34px;
+            color: #0f172a;
+            padding-top: 30px;
+            @include respond(lg) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            a {
+                color: currentColor;
+            }
+        }
+    }
+    &:hover {
+        .ec-btn{
+            .ec-news {
+                background: #1140c0;
+                border: 1px solid #1140c0;
+                color: var(--color-white);
+                span {
+                    svg {
+                        filter: brightness(100);
+                    }
+                }
+            }
+        }
+    }
+}
+.ec-btn{
+    .ec-news {
+        border: 1px solid #e1e7e8;
+        box-shadow: none;
+        padding: 17px 38px;
+        @include transition (0.4s);
+        span {
+            svg {
+                @include transition (0.4s);
+            }
+        }
+    }
+}
+.news-shape {
+    .shape {
+        position: absolute;
+        z-index: -1;
+        &--one {
+            top: 21%;
+            left: 116px;
+        }
+        &--two {
+            bottom: 19%;
+            right: 101px;
+        }
+    }
+}

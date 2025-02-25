@@ -1,0 +1,129 @@
+.xb-award {
+    border-radius: 20px;
+    background: var(--color-white);
+    box-shadow: 0 62px 73px 0 #dad9d6;
+    border: 1px solid #f2f6ff;
+    overflow: hidden;
+    margin-left: -70px;
+    margin-right: -70px;
+    padding: 0 70px;
+    @include respond(laptop) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .xb-shape {
+        .shape {
+            &--one {
+                position: absolute;
+                top: -7px;
+                right: -50px;
+            }
+            &--two {
+                position: absolute;
+                bottom: 22px;
+                right: -50px;
+            }
+        }
+    }
+}
+.award-left {
+    padding: 78px 0;
+}
+.brand_award {
+    justify-content: end;
+    margin-top: -9px;
+    margin-bottom: -40px;
+    max-height: 550px;
+    @include respond(md) {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .xb-item {
+        &--holder {
+                
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+            &.change-holder {
+                margin-top: -139px;
+            }
+        }
+        &--item {
+            border-radius: 10px;
+            width: 160px;
+            height: 180px;
+            box-shadow: 0 8px 18px 0 #e4e4e4;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include respond(md) {
+                width: 140px;
+            }
+            @include respond(xs) {
+                width: 75px;
+                height: 100px;
+                img {
+                    max-width: 40px;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+.marquee-first {
+    -webkit-animation: marquee 25s linear infinite;
+  animation: marquee 25s linear infinite;
+}
+.marquee-2 {
+    -webkit-animation: marquee2 25s linear infinite;
+  animation: marquee2 25s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+    from {
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+  }
+  
+  @keyframes marquee {
+    from {
+        -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+  }
+  
+@-webkit-keyframes marquee2 {
+    from {
+      -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    to {
+      -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+  }
+  
+  @keyframes marquee2 {
+    from {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    to {
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+  }
