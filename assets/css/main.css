@@ -8699,4 +8699,28 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   padding: 29px 0;
   color: #92ACB0; }
 
+  .thm-btn1 {
+    font-size: 18px;
+    color: var(--color-primary);
+    background: var(--color-yellow);
+    border-style: none;
+    padding: 22px 38px;
+    align-self: center;
+    position: relative;
+    line-height: 12px;
+    transition: all 0.2s cubic-bezier(0.68, 0.01, 0.58, 0.75);
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: -0.02px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    z-index: 1; }
+
+    
+
 /*# sourceMappingURL=main.css.map */
+

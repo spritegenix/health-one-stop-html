@@ -1,92 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zxx">
-
-<head>
-
+  <head>
     <!--========= Required meta tags =========-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <title>Health One Stop Solutions</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon"/>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="images/x-icon"
+    />
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/recoleta-font.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/recoleta-font.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <style>
+    /* Popup styling */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
 
-<body>
+    .popup {
+      background: white;
+      padding: 20px;
+      width: 350px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+    }
 
-<!-- backtotop - start -->
-<div class="xb-backtotop">
-    <a href="#" class="scroll">
+    .popup img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .popup h3 {
+      margin: 10px 0;
+    }
+
+    .popup form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .popup input,
+    .popup button {
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .popup button {
+      background-color: #ffd470;
+      color: black;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: rgb(237, 49, 49);
+      color: black;
+      border-radius: 50%;
+      width: 20px; /* Ensure width and height are equal */
+      height: 20px; /* Ensure width and height are equal */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      font-weight: bold;
+    }
+    .short-text .extra-text {
+      display: none;
+    }
+
+    .read-more-btn {
+      background: none;
+      border: none;
+      color: #ffd470;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 1px 0;
+    }
+
+    .read-more-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <!-- backtotop - start -->
+    <div class="xb-backtotop">
+      <a href="#" class="scroll">
         <i class="far fa-arrow-up"></i>
-    </a>
-</div>
-<!-- backtotop - end -->
+      </a>
+    </div>
+    <!-- backtotop - end -->
 
- <!-- Preloader - Start -->
- <div id="preloader">
-    <div id="loader" class="loader">
+    <!-- Preloader - Start -->
+    <div id="preloader">
+      <div id="loader" class="loader">
         <div class="loader-container">
-            <div class="loader-icon"><img src="assets/img/logo/preloader.png" alt="Konstruk"></div>
+          <div class="loader-icon">
+            <img src="assets/img/logo/preloader.png" alt="Konstruk" />
+          </div>
         </div>
-    </div>              
-</div>
-  <!-- Preloader - End -->
+      </div>
+    </div>
+    <!-- Preloader - End -->
 
-
-<div class="body_wrap">
-
-    <!-- header start -->
-    <header id="xb-header-area" class="header-area header-style-one is-sticky">
+    <div class="body_wrap">
+      <!-- header start -->
+      <header
+        id="xb-header-area"
+        class="header-area header-style-one is-sticky"
+      >
         <div class="xb-header">
-            <div class="container">
-                <div class="header__wrap ul_li_between">
-                    <div class="header-logo">
-                        <a href="index.html"><img src="assets/img/logo/main-logo.png" style="height: 2.5rem;  object-fit: contain;" alt=""></a>
-                    </div>
-                    <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
-                        <nav class="main-menu collapse navbar-collapse">
-                            <ul>
-                                <li class=" active">
-                                    <a href="index.html"><span>Home</span></a>
-                                    <!-- <ul class="submenu">
+          <div class="container">
+            <div class="header__wrap ul_li_between">
+              <div class="header-logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo/main-logo.png"
+                    style="height: 2.5rem; object-fit: contain"
+                    alt=""
+                /></a>
+              </div>
+              <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
+                <nav class="main-menu collapse navbar-collapse">
+                  <ul>
+                    <li class="active">
+                      <a href="index.html"><span>Home</span></a>
+                      <!-- <ul class="submenu">
                                         <li><a href="index.html"><span>Disability Care</span></a></li>
                                         <li><a href="ndis.html"><span>NDIS</span></a></li>
                                         <li><a href="senior-care.html"><span>Senior Care</span></a></li>
                                         <li><a href="elderly-care.html"><span>Elderly Care</span></a></li>
                                     </ul> -->
-                                </li>
-                                <li><a href="about.html"><span>About Us</span></a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="services.html"><span>Services</span></a>
-                                    <ul class="submenu">
-                                        <li><a href="fitness.html"><span>Fitness</span></a></li>
-                                        <li><a href="mental-wellness.html"><span>Mental Wellness</span></a></li>
-                                        <li><a href="yoga.html"><span>Yoga</span></a></li>
-                                        <li><a href="meditation.html"><span>Meditation</span></a></li>
-                                        <li><a href="ayurveda.html"><span>Ayurveda</span></a></li>
-                                        <li><a href="diet-plan.html"><span>Diet Plan</span></a></li>
-                                        <li><a href="naturopathy.html"><span>Naturopathy</span></a></li>
-                                        <li><a href="other-services.html"><span>Other Services</span></a></li>
-                                    </ul>
-                                </li>
-                                <!-- <li class="menu-item-has-children">
+                    </li>
+                    <li>
+                      <a href="about.html"><span>About Us</span></a>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="services.html"><span>Services</span></a>
+                      <ul class="submenu">
+                        <li>
+                          <a href="fitness.html"><span>Fitness</span></a>
+                        </li>
+                        <li>
+                          <a href="mental-wellness.html"
+                            ><span>Mental Wellness</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="yoga.html"><span>Yoga</span></a>
+                        </li>
+                        <li>
+                          <a href="meditation.html"><span>Meditation</span></a>
+                        </li>
+                        <li>
+                          <a href="ayurveda.html"><span>Ayurveda</span></a>
+                        </li>
+                        <li>
+                          <a href="diet-plan.html"><span>Diet Plan</span></a>
+                        </li>
+                        <li>
+                          <a href="naturopathy.html"
+                            ><span>Naturopathy</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="other-services.html"
+                            ><span>Other Services</span></a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- <li class="menu-item-has-children">
                                     <a href="#!"><span>Pages</span></a>
                                     <ul class="submenu">
                                         <li><a href="about.html"><span>About Us</span></a></li>
-                                        <li><a href="career.html"><span>Career</span></a></li>
+                                        <li><a href="bookings.html"><span>Bookings</span></a></li>
                                         <li><a href="career-single.html"><span>Career Details</span></a></li>
                                         <li><a href="portfolio.html"><span>Portfolio</span></a></li>
                                         <li><a href="portfolio-single.html"><span>Portfolio Details</span></a></li>
@@ -95,62 +219,103 @@
                                         <li><a href="faq.html"><span>FAQ</span></a></li>
                                     </ul>
                                 </li> -->
-                                <li class="">
-                                    <a href="blog.html"><span>Blog</span></a>
-                                    <!-- <ul class="submenu">
+                    <li class="">
+                      <a href="blog.html"><span>Blog</span></a>
+                      <!-- <ul class="submenu">
                                         <li><a href="blog.html"><span>Blog</span></a></li>
                                         <li><a href="blog-single.html"><span>Blog Details</span></a></li>
                                     </ul> -->
-                                </li>
-                                <li><a href="career.html"><span>Career</span></a></li>
-                                <li><a href="contact.html"><span>Contact</span></a></li>
-                            </ul>
-                        </nav>
-                        <div class="xb-header-wrap">
-                            <div class="xb-header-menu">
-                                <div class="xb-header-menu-scroll">
-                                    <div class="xb-menu-close xb-hide-xl xb-close"></div>
-                                    <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home"><img src="assets/img/logo/main-logo.png" alt=""></a></div>
-                                 
-                                    <nav class="xb-header-nav">
-                                        <ul class="xb-menu-primary clearfix">
-                                            <li class="menu-item ">
-                                                <a href="/"><span>Home</span></a>
-                                                <!-- <ul class="sub-menu">
+                    </li>
+           
+                          <li><a href="bookings.html"><span>Bookings</span></a></li>
+        
+                    <li>
+                      <a href="contact.html"><span>Contact</span></a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="xb-header-wrap">
+                  <div class="xb-header-menu">
+                    <div class="xb-header-menu-scroll">
+                      <div class="xb-menu-close xb-hide-xl xb-close"></div>
+                      <div class="xb-logo-mobile xb-hide-xl">
+                        <a href="index.html" rel="home"
+                          ><img src="assets/img/logo/main-logo.png" alt=""
+                        /></a>
+                      </div>
+
+                      <nav class="xb-header-nav">
+                        <ul class="xb-menu-primary clearfix">
+                          <li class="menu-item">
+                            <a href="/"><span>Home</span></a>
+                            <!-- <ul class="sub-menu">
                                                     <li><a href="index.html"><span>Disability Care</span></a></li>
                                                     <li><a href="ndis.html"><span>NDIS</span></a></li>
                                                     <li><a href="senior-care.html"><span>Senior Care</span></a></li>
                                                     <li><a href="elderly-care.html"><span>Elderly Care</span></a></li>
                                                 </ul> -->
-                                            </li>
-                                            <li><a href="about.html"><span>About Us</span></a></li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="services.html"><span>Services</span></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="fitness.html"><span>Fitness</span></a></li>
-                                                    <li><a href="mental-wellness.html"><span>Mental Wellness</span></a></li>
-                                                    <li><a href="yoga.html"><span>Yoga</span></a></li>
-                                                    <li><a href="meditation.html"><span>Meditation</span></a></li>
-                                                    <li><a href="ayurveda.html"><span>Ayurveda</span></a></li>
-                                                    <li><a href="diet-plan.html"><span>Diet Plan</span></a></li>
-                                                    <li><a href="naturopathy.html"><span>Naturopathy</span></a></li>
-                                                    <li><a href="other-services.html"><span>Other Services</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog.html"><span>Blog</span></a></li>
-                                            <li><a href="career.html"><span>Career</span></a></li>
-                                            <li><a href="contact.html"><span>Contact</span></a></li>
-                                           
-                                        
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="xb-header-menu-backdrop"></div>
-                        </div>
+                          </li>
+                          <li>
+                            <a href="about.html"><span>About Us</span></a>
+                          </li>
+                          <li class="menu-item menu-item-has-children">
+                            <a href="services.html"><span>Services</span></a>
+                            <ul class="sub-menu">
+                              <li>
+                                <a href="fitness.html"><span>Fitness</span></a>
+                              </li>
+                              <li>
+                                <a href="mental-wellness.html"
+                                  ><span>Mental Wellness</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="yoga.html"><span>Yoga</span></a>
+                              </li>
+                              <li>
+                                <a href="meditation.html"
+                                  ><span>Meditation</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="ayurveda.html"
+                                  ><span>Ayurveda</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="diet-plan.html"
+                                  ><span>Diet Plan</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="naturopathy.html"
+                                  ><span>Naturopathy</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="other-services.html"
+                                  ><span>Other Services</span></a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="blog.html"><span>Blog</span></a>
+                          </li>
+                          <li>
+                                <li><a href="bookings.html"><span>Bookings</span></a></li>
+                          </li>
+                          <li>
+                            <a href="contact.html"><span>Contact</span></a>
+                          </li>
+                        </ul>
+                      </nav>
                     </div>
-                    <!-- <div class="header-contact d-none d-lg-block">
+                  </div>
+                  <div class="xb-header-menu-backdrop"></div>
+                </div>
+              </div>
+              <!-- <div class="header-contact d-none d-lg-block">
                         <a href="tel:+91-2054875454"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.4175 9.40566C15.0413 9.40566 14.7438 9.09941 14.7438 8.73191C14.7438 8.40816 14.42 7.73441 13.8775 7.14816C13.3437 6.57941 12.7575 6.24691 12.2675 6.24691C11.8913 6.24691 11.5938 5.94066 11.5938 5.57316C11.5938 5.20566 11.9 4.89941 12.2675 4.89941C13.1425 4.89941 14.0613 5.37191 14.8663 6.22066C15.6188 7.01691 16.1 8.00566 16.1 8.72316C16.1 9.09941 15.7938 9.40566 15.4175 9.40566Z" fill="white" />
                             <path d="M18.5763 9.40625C18.2 9.40625 17.9025 9.1 17.9025 8.7325C17.9025 5.62625 15.3738 3.10625 12.2763 3.10625C11.9 3.10625 11.6025 2.8 11.6025 2.4325C11.6025 2.065 11.9 1.75 12.2675 1.75C16.1175 1.75 19.25 4.8825 19.25 8.7325C19.25 9.1 18.9438 9.40625 18.5763 9.40625Z" fill="white" />
@@ -158,203 +323,386 @@
                             <path d="M19.2238 16.0389C19.2238 16.2839 19.18 16.5377 19.0925 16.7827C19.0663 16.8527 19.04 16.9227 19.005 16.9927C18.8563 17.3077 18.6638 17.6052 18.41 17.8852C17.9813 18.3577 17.5088 18.6989 16.975 18.9177C16.9663 18.9177 16.9575 18.9264 16.9488 18.9264C16.4325 19.1364 15.8725 19.2502 15.2688 19.2502C14.3763 19.2502 13.4225 19.0402 12.4163 18.6114C11.41 18.1827 10.4038 17.6052 9.40627 16.8789C9.06502 16.6252 8.72377 16.3714 8.40002 16.1002L11.2613 13.2389C11.5063 13.4227 11.725 13.5627 11.9088 13.6589C11.9525 13.6764 12.005 13.7027 12.0663 13.7289C12.1363 13.7552 12.2063 13.7639 12.285 13.7639C12.4338 13.7639 12.5475 13.7114 12.6438 13.6152L13.3088 12.9589C13.5275 12.7402 13.7375 12.5739 13.9388 12.4689C14.14 12.3464 14.3413 12.2852 14.56 12.2852C14.7263 12.2852 14.9013 12.3202 15.0938 12.3989C15.2863 12.4777 15.4875 12.5914 15.7063 12.7402L18.6025 14.7964C18.83 14.9539 18.9875 15.1377 19.0838 15.3564C19.1713 15.5752 19.2238 15.7939 19.2238 16.0389Z" fill="white" />
                           </svg> <span>+91-2054875454</span></a>
                     </div> -->
-                    <div class="header-bar-mobile side-menu d-lg-none">
-                        <a class="xb-nav-mobile" href="javascript:void(0);">
-                            <i class="far fa-bars"></i>
-                        </a>
-                    </div>
-                </div>
+              <div class="header-bar-mobile side-menu d-lg-none">
+                <a class="xb-nav-mobile" href="javascript:void(0);">
+                  <i class="far fa-bars"></i>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </header>
-    <!-- header end -->
+      </header>
+      <!-- header end -->
 
-    <!-- main area start  -->
-    <main>
-
-         <!-- breadcrumb start -->
-         <section class="breadcrumb ul_li_center bg_img" data-bg-color="#E7E9EE" data-background="assets/img/bg/bg.webp">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-9">
-                        <div class="breadcrumb__content">
-                            <h2 class="breadcrumb__title">Our Blog</h2>
-                            
-                        </div>
-                    </div>
+      <!-- main area start  -->
+      <main>
+        <!-- breadcrumb start -->
+        <section
+          class="breadcrumb ul_li_center bg_img"
+          data-bg-color="#E7E9EE"
+          data-background="assets/img/bg/bg.webp"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-9">
+                <div class="breadcrumb__content">
+                  <h2 class="breadcrumb__title">Bookings</h2>
                 </div>
+              </div>
             </div>
+          </div>
         </section>
         <!-- breadcrumb end -->
 
-         <!-- blog start -->
-         <section class="blog pt-50 pb-150">
-           
-                <div class="container">
-                    <div class="section-title pb-35 news-title">
-                        <span class="sub-title">our latest Blogs</span>
-                        <div class="xb-heading pb-20">
-                            <h2 class="title">browse our  </h2>
-                        </div>
-                    </div>
-                    <div class="xb-news-wrap">
-                        <div class="row mt-none-30 justify-content-center">
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="xb-news xb-line">
-                                    <div class="xb-item--img">
-                                        <a href="the-power-of-meditation.html"><img src="assets/img/news/meditation.webp" alt=""></a>
-                                    </div>
-                                    <div class="xb-item--holder pt-25">
-                                        <h2 class="xb-item--title border_effect pb-30"><a href="the-power-of-meditation.html">The Power of Meditation: A Journey to Inner Peace.</a></h2>
-                                        <div class="xb-item--button ul_li">
-                                            <a href="the-power-of-meditation.html" class="news-btn">Read More <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 1C14 0.447716 13.5523 4.87118e-07 13 2.34237e-07L4 1.03503e-06C3.44771 6.97852e-07 3 0.447716 3 1C3 1.55229 3.44771 2 4 2L12 2L12 10C12 10.5523 12.4477 11 13 11C13.5523 11 14 10.5523 14 10L14 1ZM1.70711 13.7071L13.7071 1.70711L12.2929 0.292894L0.292893 12.2929L1.70711 13.7071Z" fill="#0B3948" />
-                                              </svg></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="xb-news xb-line">
-                                    <div class="xb-item--img">
-                                        <a href="the-transformative-power-of-yoga.html"><img src="assets/img/news/wellness.webp" alt=""></a>
-                                    </div>
-                                    <div class="xb-item--holder pt-25">
-                                        <h2 class="xb-item--title border_effect pb-30"><a href="the-transformative-power-of-yoga.html">The Transformative Power of Yoga: A Path to Inner Peace.</a></h2>
-                                        <div class="xb-item--button ul_li">
-                                            <a href="the-transformative-power-of-yoga.html" class="news-btn">Read More <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 1C14 0.447716 13.5523 4.87118e-07 13 2.34237e-07L4 1.03503e-06C3.44771 6.97852e-07 3 0.447716 3 1C3 1.55229 3.44771 2 4 2L12 2L12 10C12 10.5523 12.4477 11 13 11C13.5523 11 14 10.5523 14 10L14 1ZM1.70711 13.7071L13.7071 1.70711L12.2929 0.292894L0.292893 12.2929L1.70711 13.7071Z" fill="#0B3948" />
-                                              </svg></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="xb-news">
-                                    <div class="xb-item--img">
-                                        <a href="yoga-the-path-to-a-balanced-life.html"><img src="assets/img/news/yoga.webp" alt=""></a>
-                                    </div>
-                                    <div class="xb-item--holder pt-25">
-                                        <h2 class="xb-item--title border_effect pb-30"><a href="yoga-the-path-to-a-balanced-life.html">Yoga: The Path to a Balanced Life.</a></h2>
-                                        <div class="xb-item--button ul_li">
-                                            <a href="yoga-the-path-to-a-balanced-life.html" class="news-btn">Read More <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 1C14 0.447716 13.5523 4.87118e-07 13 2.34237e-07L4 1.03503e-06C3.44771 6.97852e-07 3 0.447716 3 1C3 1.55229 3.44771 2 4 2L12 2L12 10C12 10.5523 12.4477 11 13 11C13.5523 11 14 10.5523 14 10L14 1ZM1.70711 13.7071L13.7071 1.70711L12.2929 0.292894L0.292893 12.2929L1.70711 13.7071Z" fill="#0B3948" />
-                                              </svg></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-         
-        </section>
-        <!-- blog end -->
-        
-        <!-- cta section start  -->
-        
-        <!-- cta section end  -->
-    </main>
-    <!-- main area end  -->
-    
-   <!-- footer strt -->
-   <footer class="footer bg_img pos-rel" data-background="assets/img/bg/footer_bg.jpg">
-        <div class="xb-footer-wrap pt-10">
-            <div class="container">
-                <div class="xb-footer-inner footer-widget-wrap pt-50">
-                    <div class="row xb-footer pb-50">
-                        <div class="col-xl-4 col-lg-6 col-md-6 footer-col widget-top mt-30">
-                            <div class="footer-widget">
-                                <span class="xb-item--title">✍️ need help</span>
-                                <ul class="xb-item--holder list-unstyled">
-                                    <li class="xb-item--contact" style="font-size: medium;"> <span><img style="width: 18px; height: 18px;" src="assets/img/icon/address.svg" alt=""></span> Mumbai, Maharashtra, India. 
+        <!-- service section start  -->
+        <section class="service pt-130 pb-100">
+          <div class="container">
+            <div class="section-title service-title text-center pb-35">
+              <span class="sub-title">what we're offering</span>
+              <div class="xb-heading pb-20">
+                <h2 class="title">
+                  our main
+                  <span class="pos-rel">
+                    services
+                    <svg
+                      width="212"
+                      height="65"
+                      viewBox="0 0 212 65"
+                      fill="none"
+                      preserveAspectRatio="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_631_239"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="212"
+                        height="65"
+                      >
+                        <path
+                          d="M24.9555 12.447C25.0463 12.5344 25.2104 12.582 25.4266 12.575C25.5073 12.5723 25.5603 12.5423 25.626 12.5238C25.4669 12.4814 25.3105 12.4311 25.1405 12.3976C25.0985 12.3896 25.0186 12.4293 24.9555 12.447ZM96.0983 61.2467C96.1193 61.2768 96.1378 61.3297 96.1656 61.3341C96.2691 61.3474 96.3734 61.3438 96.4777 61.3474C96.4541 61.3174 96.4382 61.267 96.4079 61.2635C96.3069 61.2494 96.2026 61.2503 96.0983 61.2467ZM116.551 62.5082C116.471 62.4773 116.397 62.4323 116.311 62.419C116.22 62.4049 116.116 62.4225 116.019 62.4261C116.101 62.4578 116.175 62.5029 116.264 62.517C116.353 62.5302 116.454 62.5126 116.551 62.5082ZM126.228 62.1824C126.129 62.1604 126.027 62.1277 125.931 62.118C125.889 62.1153 125.854 62.1586 125.816 62.1807C125.916 62.2027 126.017 62.2336 126.116 62.2433C126.156 62.2469 126.191 62.2045 126.228 62.1824ZM137.213 9.75732C137.533 9.79528 137.619 9.76792 137.428 9.6867C137.383 9.66817 137.239 9.67876 137.14 9.67523C137.163 9.70259 137.187 9.72996 137.213 9.75732ZM159.978 57.1871C159.964 57.1606 159.97 57.1244 159.931 57.1129C159.857 57.0882 159.74 57.0635 159.67 57.067C159.425 57.0803 159.446 57.1297 159.725 57.1844C159.799 57.1994 159.893 57.1862 159.978 57.1871ZM173.373 12.5538C173.292 12.5326 173.207 12.5017 173.125 12.4947C173.043 12.4867 172.963 12.5026 172.882 12.5088C172.946 12.537 173.001 12.5759 173.08 12.5935C173.156 12.6112 173.26 12.6156 173.341 12.6129C173.37 12.6121 173.364 12.5732 173.373 12.5538ZM174.926 54.2891C174.846 54.2591 174.772 54.2158 174.688 54.2035C174.602 54.1894 174.503 54.2052 174.41 54.2079C174.488 54.2379 174.559 54.2829 174.643 54.2953C174.733 54.3085 174.831 54.2917 174.926 54.2891ZM196.823 47.8973C196.902 47.8893 196.983 47.8832 197.062 47.8761C196.999 47.847 196.946 47.8037 196.873 47.7905C196.626 47.7463 196.511 47.7675 196.589 47.8381C196.613 47.8602 196.742 47.8779 196.823 47.8973ZM202.378 43.4033C202.23 43.4731 202.26 43.5251 202.469 43.5428C202.505 43.5463 202.546 43.4907 202.546 43.4572C202.548 43.4457 202.438 43.4219 202.378 43.4033ZM142.022 58.8078C142.181 58.7822 142.342 58.7575 142.501 58.7319C142.324 58.6736 142.154 58.588 141.972 58.5624C141.787 58.5368 141.553 58.5518 141.408 58.5836C141.238 58.6215 141.623 58.7672 142.022 58.8078ZM135.449 60.6032C135.337 60.507 135.144 60.4426 134.886 60.4364C134.676 60.4311 134.475 60.4461 134.273 60.4514C134.464 60.5088 134.65 60.5909 134.847 60.6165C135.042 60.6412 135.248 60.6103 135.449 60.6032ZM136.308 8.96375C136.515 8.96817 136.711 8.95316 136.912 8.94698C136.722 8.89313 136.538 8.81457 136.345 8.79074C136.149 8.7669 135.947 8.79603 135.749 8.80221C135.861 8.89843 136.054 8.95934 136.308 8.96375ZM157.432 56.6274C157.347 56.5939 157.249 56.533 157.18 56.5303C156.973 56.5215 156.719 56.51 156.592 56.5471C156.415 56.5965 156.491 56.7148 156.734 56.759C156.897 56.789 157.124 56.7457 157.299 56.7192C157.374 56.7087 157.388 56.6601 157.432 56.6274ZM105.54 62.999C105.749 63.0872 105.958 63.1887 106.205 63.2744C106.414 63.3476 106.635 63.3441 106.753 63.2779C106.788 63.2576 106.749 63.1949 106.687 63.1702C106.457 63.0775 106.207 62.9875 105.947 62.9054C105.89 62.8868 105.744 62.8913 105.674 62.9036C105.614 62.9142 105.601 62.9522 105.54 62.999ZM171.364 53.4655C171.856 53.5706 172.29 53.582 172.638 53.5061C172.781 53.4752 172.921 53.4002 172.899 53.3366C172.865 53.2457 172.601 53.1813 172.355 53.1954C171.955 53.2192 171.567 53.2554 171.183 53.2943C171.131 53.2996 171.092 53.3534 171.126 53.3764C171.177 53.4126 171.298 53.4417 171.364 53.4655ZM102.802 62.8489C102.819 62.8842 102.808 62.9248 102.86 62.9566C103.199 63.1667 103.66 63.3053 104.264 63.337C104.366 63.3423 104.476 63.33 104.54 63.3088C104.577 63.2964 104.558 63.2391 104.513 63.2214C104.078 63.0572 103.646 62.8868 103.067 62.818C102.981 62.8074 102.89 62.8374 102.802 62.8489ZM166.316 56.3361C166.573 56.3238 166.866 56.3167 167.14 56.2929C167.205 56.2867 167.256 56.224 167.221 56.1976C167.128 56.1296 167.004 56.0395 166.848 56.0069C166.511 55.9363 166.206 55.9592 165.973 56.0263C165.903 56.0466 165.819 56.0969 165.853 56.1181C165.958 56.1852 166.116 56.2443 166.316 56.3361ZM89.1553 63.0237C89.4455 63.0325 89.8821 63.0599 90.2902 63.0537C90.4727 63.0519 90.6124 62.9857 90.7444 62.9398C90.7865 62.9248 90.7815 62.8745 90.7394 62.848C90.6856 62.8127 90.5577 62.7597 90.4921 62.7589C89.9637 62.75 89.4396 62.75 88.9206 62.7536C88.256 62.758 88.1298 62.7889 88.3838 62.8542C88.5832 62.9063 88.7969 62.946 89.1553 63.0237ZM147.149 60.6659C146.925 60.6447 146.69 60.6068 146.488 60.6094C146.32 60.6112 146.076 60.6491 146.075 60.6933C146.075 60.7604 146.214 60.8654 146.373 60.9228C146.883 61.1099 147.303 61.1285 147.831 60.9934C148.03 60.944 147.989 60.8548 147.777 60.7974C147.58 60.7445 147.358 60.7092 147.149 60.6659ZM135.024 9.63198C134.999 9.59314 135.004 9.54988 134.947 9.51722C134.896 9.48721 134.758 9.44572 134.696 9.44749C133.966 9.47309 133.363 9.61785 132.526 9.54812C132.444 9.54106 132.37 9.58607 132.295 9.60726C132.454 9.66022 132.6 9.73525 132.775 9.76527C133.479 9.89062 134.134 9.9118 134.668 9.78822C134.82 9.75203 134.908 9.68494 135.024 9.63198ZM189.925 51.1881C190.014 51.2702 190.055 51.3682 190.208 51.4264C190.341 51.4776 190.663 51.5244 190.793 51.5041C191.471 51.4061 191.81 51.1881 191.929 50.9144C191.95 50.8632 191.714 50.7626 191.566 50.6938C191.516 50.6708 191.288 50.654 191.275 50.6655C190.998 50.9047 190.536 51.0733 189.925 51.1881ZM156.142 57.4281C155.913 57.3998 155.659 57.3442 155.485 57.3557C155.34 57.3654 155.195 57.4466 155.213 57.5066C155.23 57.5711 155.45 57.7008 155.57 57.7114C156.231 57.7697 156.901 57.8235 157.538 57.8332C157.948 57.8385 158.33 57.7776 158.671 57.7176C158.781 57.6982 158.801 57.5737 158.714 57.5137C158.623 57.4501 158.328 57.3645 158.176 57.3636C157.87 57.361 157.573 57.3945 157.329 57.4422C156.967 57.5128 156.606 57.5411 156.142 57.4281ZM160.186 58.4971C160.887 58.6807 160.51 58.8554 160.513 59.0435C160.513 59.1353 160.693 59.1997 160.943 59.2068C161.735 59.228 162.419 59.1759 162.854 58.9658C162.99 58.8996 162.889 58.746 162.755 58.7433C161.909 58.7327 161.273 58.3876 160.473 58.3488C160.37 58.3435 160.25 58.3514 160.189 58.3735C160.142 58.3894 160.183 58.4379 160.186 58.4971ZM136.217 60.2095C136.423 60.1901 136.643 60.1848 136.787 60.1469C136.972 60.0983 136.923 60.0162 136.753 59.9341C136.45 59.7876 136.158 59.6375 135.858 59.4892C135.404 59.2686 134.994 59.2209 134.443 59.3365C133.946 59.4398 133.473 59.5546 133.004 59.6711C132.933 59.6879 132.878 59.7505 132.916 59.7699C133.049 59.8326 133.279 59.9385 133.382 59.9359C134.328 59.9085 135.264 59.9182 136.217 60.2095ZM158.983 10.9499C159.013 10.9508 159.141 10.9675 159.234 10.9596C159.418 10.9437 159.663 10.934 159.739 10.8837C159.815 10.8334 159.776 10.7266 159.671 10.6595C159.487 10.5421 159.158 10.4414 158.989 10.3223C158.412 9.91445 157.56 9.83147 156.63 9.80676C156.372 9.79881 156.117 9.963 156.247 10.0566C156.849 10.4829 157.552 10.8616 158.983 10.9499ZM144.001 59.7955C145.406 59.9589 145.606 59.9174 146.034 59.4751C146.16 59.3436 146.463 59.2527 146.677 59.1406C146.86 59.047 146.686 58.9005 146.353 58.8422C145.791 58.7433 145.233 58.6824 144.719 58.7177C144.323 58.746 143.918 58.7928 144.002 58.9976C144.075 59.1776 143.938 59.2986 143.581 59.3763C143.336 59.431 143.15 59.5157 143.394 59.649C143.513 59.7135 143.795 59.7479 144.001 59.7955ZM112.146 61.6175C112.299 61.5283 112.476 61.4454 112.604 61.3491C112.893 61.1338 112.675 60.9351 111.894 60.6968C111.804 60.6686 111.663 60.6518 111.566 60.6527C111.473 60.6536 111.331 60.6774 111.336 60.7021C111.389 60.9837 111.464 61.2662 111.534 61.5486C111.33 61.5248 111.127 61.4983 110.926 61.4824C110.832 61.4745 110.73 61.4833 110.662 61.4992C110.618 61.5098 110.629 61.5442 110.614 61.5681C110.789 61.5981 111.002 61.6563 111.131 61.6475C111.287 61.636 111.372 61.5672 111.484 61.5222C111.726 61.5504 111.968 61.5778 112.207 61.6042C112.301 61.7358 112.392 61.7711 112.43 61.7014C112.436 61.6908 112.246 61.6466 112.146 61.6175ZM114.138 62.5788C114.225 62.5788 114.319 62.585 114.394 62.5761C114.437 62.57 114.447 62.5426 114.472 62.5249C114.38 62.5523 114.287 62.5797 114.194 62.607C113.357 62.6123 112.837 62.7359 112.852 63.0749C112.857 63.2152 113.142 63.3662 113.462 63.3618C113.65 63.3591 113.923 63.3326 113.947 63.2823C114.052 63.0555 114.082 62.8145 114.138 62.5788ZM151.811 10.1342C151.79 9.94181 151.791 9.75291 151.737 9.55959C151.71 9.46426 151.482 9.39717 151.237 9.40512C151.063 9.41041 150.847 9.42983 150.783 9.4775C150.712 9.53046 150.753 9.62403 150.814 9.69818C150.915 9.81911 151.074 9.93652 151.206 10.0566C150.846 10.0522 150.602 10.1069 150.48 10.2199C149.587 10.1078 148.696 10.0018 147.806 9.88532C146.98 9.77674 146.29 9.82441 145.626 9.90209C145.539 9.91268 145.488 9.94711 145.422 9.97094C145.521 10.0018 145.612 10.0407 145.717 10.0601C145.932 10.1007 146.164 10.151 146.372 10.1607C147.568 10.2137 148.757 10.2569 149.948 10.2993C150.045 10.3028 150.137 10.2808 150.215 10.2631C150.295 10.2446 150.354 10.2172 150.423 10.1934C150.783 10.196 151.026 10.1413 151.153 10.0292C151.389 10.0592 151.628 10.0875 151.867 10.1175C151.995 10.1934 152.088 10.2843 152.258 10.3417C152.499 10.4238 152.707 10.4079 152.737 10.3187C152.741 10.302 152.574 10.2446 152.475 10.2278C152.258 10.189 152.033 10.1643 151.811 10.1342ZM171.573 56.9505C171.663 56.9532 171.761 56.962 171.84 56.9567C171.89 56.9523 171.914 56.9258 171.949 56.9108C171.842 56.9337 171.738 56.9576 171.632 56.9814C171.369 57.0185 171.101 57.0512 170.85 57.0953C170.773 57.1076 170.712 57.143 170.7 57.1756C170.69 57.2003 170.79 57.2674 170.807 57.2665C170.991 57.2683 171.262 57.2877 171.325 57.2498C171.464 57.1659 171.496 57.052 171.573 56.9505ZM153.948 9.63374C154.029 9.63198 154.119 9.63551 154.19 9.62844C154.234 9.62227 154.25 9.59932 154.278 9.58431C154.188 9.60991 154.095 9.63639 154.005 9.66199C153.779 9.63816 153.55 9.60549 153.329 9.59225C152.989 9.57107 152.925 9.62403 153.169 9.7176C153.241 9.74496 153.421 9.76527 153.489 9.75379C153.66 9.72378 153.798 9.67523 153.948 9.63374ZM140.853 59.664C140.758 59.6631 140.65 59.6534 140.573 59.664C140.527 59.6711 140.528 59.709 140.51 59.732C140.69 59.7629 140.79 59.732 140.803 59.6393C141.007 59.664 141.211 59.6931 141.411 59.709C141.5 59.7161 141.603 59.7037 141.664 59.6852C141.704 59.6728 141.698 59.6128 141.683 59.6102C141.512 59.5749 141.29 59.514 141.17 59.5246C141.021 59.5387 140.955 59.6146 140.853 59.664ZM157.62 8.35202C157.642 8.38557 157.648 8.42088 157.688 8.45089C157.715 8.47119 157.794 8.48531 157.849 8.50209C157.752 8.45707 157.657 8.41293 157.559 8.36703C157.524 8.33172 157.504 8.29465 157.45 8.26199C157.419 8.24256 157.337 8.23021 157.277 8.21432C157.391 8.26022 157.505 8.30612 157.62 8.35202ZM187.33 52.7214C187.247 52.7223 187.155 52.7178 187.085 52.7276C187.042 52.7329 187.036 52.762 187.016 52.7805C187.102 52.7514 187.188 52.7214 187.273 52.6931C187.655 52.7117 187.819 52.6216 187.99 52.5351C188.159 52.506 188.367 52.4892 188.483 52.4424C188.651 52.3727 188.554 52.295 188.286 52.2668C188.23 52.2606 188.145 52.3091 188.125 52.3418C188.083 52.4124 188.073 52.4901 188.052 52.5643C187.698 52.5607 187.445 52.6066 187.33 52.7214ZM185.183 53.4452C185.097 53.447 185.005 53.4417 184.936 53.4523C184.892 53.4576 184.884 53.4876 184.862 53.5052C184.947 53.4761 185.036 53.4461 185.124 53.4178C185.206 53.4161 185.299 53.4214 185.37 53.4108C185.414 53.4064 185.422 53.3799 185.445 53.3614C185.356 53.3896 185.269 53.417 185.183 53.4452ZM175.072 56.8825C175.072 56.9629 175.087 57.0459 175.067 57.1235C175.001 57.3698 174.744 57.5587 174.122 57.6355C173.742 57.6823 173.328 57.7079 172.978 57.7706C172.539 57.85 172.02 57.9171 171.767 58.0583C171.135 58.4158 170.138 58.5288 168.935 58.5641C167.883 58.595 166.886 58.6815 165.863 58.7433C165.962 58.6012 166.028 58.4538 166.172 58.3223C166.26 58.2384 166.28 58.1749 166.041 58.1095C165.955 58.0866 165.792 58.0733 165.727 58.0866C165.173 58.2031 164.627 58.3258 164.096 58.4538C164.04 58.4662 164.046 58.5244 164.083 58.5588C164.12 58.5924 164.244 58.6454 164.314 58.6498C164.854 58.6815 165.393 58.7027 165.933 58.7274C165.911 58.806 165.882 58.8837 165.872 58.9631C165.831 59.2703 165.421 59.4583 164.651 59.5131C163.943 59.5634 163.239 59.6164 162.435 59.574C162.013 59.5519 162.06 59.7002 162.015 59.8141C161.949 59.9862 161.617 60.0542 161.117 60.0118C160.78 59.9827 160.409 59.9209 160.294 60.056C160.083 60.304 159.595 60.3764 158.836 60.3296C158.393 60.3013 157.962 60.3146 157.529 60.3128C156.552 60.3084 156.552 60.3102 156.68 59.9165C156.73 59.762 156.475 59.6508 156.099 59.6675C155.478 59.6958 154.832 59.7011 154.535 59.928C154.341 60.0763 154.281 60.2042 154.746 60.3737C154.826 60.4029 154.915 60.4647 154.898 60.4929C154.747 60.7595 154.509 61.0093 153.74 61.0711C152.94 61.1346 152.106 61.1744 151.283 61.2203C150.783 61.2494 150.475 61.1408 150.43 60.9175C150.406 60.7939 150.421 60.673 150.418 60.5503C150.737 60.56 151.058 60.5732 151.369 60.5732C151.45 60.5732 151.522 60.5362 151.556 60.5061C151.584 60.4779 151.594 60.4276 151.542 60.4002C151.409 60.3261 151.173 60.2952 151 60.3473C150.79 60.4099 150.645 60.5 150.475 60.5785C149.458 60.5247 149.456 60.5256 149.517 60.7957C149.527 60.8363 149.592 60.8822 149.6 60.9228C149.686 61.3783 149.266 61.6802 148.052 61.7314C147.844 61.7411 147.562 61.7128 147.426 61.7508C146.196 62.0897 144.487 62.0024 142.881 61.9865C142.431 61.9812 142.053 61.9406 141.845 62.0915C141.709 62.1868 141.505 62.2672 141.292 62.3369C141.081 62.4066 140.86 62.4905 140.574 62.5046C138.595 62.5929 136.727 62.7642 134.92 62.984C133.669 62.931 132.631 63.0652 131.576 63.1834C131.286 63.2152 130.918 63.2038 130.687 63.2611C128.846 63.7157 126.54 63.5789 124.108 63.2973C123.993 63.2832 123.88 63.2735 123.768 63.2629C123.93 63.2241 124.071 63.1481 124.257 63.1526C125.823 63.1958 127.054 62.9195 128.653 62.9831C129.165 63.0034 129.671 62.9072 130.062 62.8101C130.487 62.7041 130.953 62.6626 131.514 62.6697C132.28 62.6785 133.045 62.6803 133.8 62.675C134.006 62.6724 134.227 62.6476 134.353 62.5991C134.46 62.5602 134.536 62.4428 134.46 62.4111C134.123 62.2707 133.748 62.1321 133.344 62.0209C132.436 61.772 131.657 61.7561 130.902 61.945C130.821 61.9662 130.754 61.9926 130.69 62.0191C130.185 62.223 129.309 62.1304 128.621 62.1869C127.829 62.2513 127.631 62.6185 126.667 62.6317C125.916 62.6415 125.228 62.72 124.504 62.7606C123.958 62.7915 123.398 62.713 122.841 62.5841C122.524 62.5108 122.208 62.4225 121.882 62.3749C121.702 62.3493 121.395 62.3669 121.329 62.4128C121.146 62.5408 121.074 62.6962 120.939 62.8365C120.75 63.0316 121.054 63.2258 121.885 63.2346C122.537 63.2408 123.134 63.1693 123.844 63.2532C123.652 63.3282 123.516 63.4368 123.259 63.4703C122.149 63.616 121.187 63.8349 120.24 64.0644L120.296 64.0529C119.842 64.0053 119.389 63.9655 118.936 63.9099C117.924 63.7872 117.187 63.8517 116.757 64.1386L116.82 64.1236C116.243 64.0768 115.679 64.0547 115.223 64.1386C114.694 64.2365 114.262 64.1906 113.814 63.9426C113.726 63.8932 113.376 63.8596 113.193 63.8658C112.025 63.9055 110.866 63.947 109.572 63.7696C108.048 63.7634 106.526 63.7616 104.998 63.7484C104.121 63.7413 103.549 63.9894 102.549 63.8852C101.761 63.8031 100.971 63.7599 100.182 63.699C99.8411 63.6734 99.7317 63.6001 99.7502 63.4094C99.757 63.3344 99.7973 63.2629 99.7738 63.1852C99.7671 63.1614 99.5988 63.1075 99.5071 63.0996C98.2545 62.984 97.5688 62.8701 96.7158 62.637C96.6401 62.6159 96.4609 62.6017 96.4356 62.6167C96.333 62.675 96.2085 62.7386 96.2152 62.8118C96.2228 62.886 96.3254 62.9937 96.4794 63.0519C96.7419 63.1508 97.0817 63.2205 97.3846 63.3035C97.6572 63.3785 97.7573 63.4686 97.568 63.5127C97.0001 63.646 96.4163 63.7722 95.8013 63.8799C95.6877 63.9002 95.3639 63.8437 95.2082 63.7916C94.8288 63.6619 94.4906 63.5083 93.9867 63.4933C92.5448 63.4491 91.1028 63.4032 89.6668 63.3715C89.4724 63.3662 89.2899 63.4183 89.157 63.465C88.929 63.5445 88.6606 63.5471 88.2947 63.5083C86.931 63.3635 85.6312 63.0766 84.2978 62.8657C84.0614 62.8295 83.9966 62.7386 84.0227 62.6432C84.0631 62.4949 83.7644 62.3969 83.4203 62.3519C82.9753 62.2919 82.5101 62.2442 82.0777 62.2301C81.5266 62.2116 81.0009 62.2363 80.4582 62.2336C80.1831 62.2328 79.9905 62.2645 80.0914 62.3237C80.2101 62.3934 80.4566 62.4411 80.6332 62.5046C80.7939 62.562 80.9344 62.6264 81.085 62.6882C80.9092 62.7174 80.7443 62.7544 80.5533 62.7721C80.2589 62.7995 79.9408 62.8198 79.5942 62.7324C79.1635 62.6238 78.7521 62.5629 78.2751 62.5382C77.5601 62.5029 77.539 62.4773 77.6518 62.1233C77.6812 62.035 77.6206 61.9547 77.3472 61.9388C76.6793 61.9017 76.0214 61.8903 75.3593 61.8682C75.2701 61.7349 75.1793 61.7014 75.1296 61.7737C75.1237 61.7817 75.3164 61.8267 75.4182 61.8549C73.9249 62.1886 72.1877 62.2292 70.1291 61.9635C67.0518 61.5663 63.966 61.2035 60.8886 60.8133C60.2139 60.7277 59.477 60.6262 58.8956 60.4567C57.7448 60.1204 56.5376 59.973 55.3017 59.7814C50.9616 59.1079 44.7076 57.7406 40.6157 56.6274C39.2688 56.2611 37.943 55.8701 36.5498 55.5435C33.9369 54.9317 31.636 54.1558 29.3023 53.3931C26.9602 52.6269 24.7746 51.8086 22.7042 50.9356C21.3279 50.3548 19.9415 49.7819 18.7183 49.164C17.877 48.7412 17.1232 48.2998 16.3324 47.8664C15.8277 47.5901 15.3406 47.3111 14.8282 47.0375C13.9466 46.567 13.0002 46.1098 12.2918 45.6084C12.0007 45.4036 11.6466 45.1961 11.2369 45.0134C10.0254 44.4749 9.49544 43.8791 8.88384 43.2859C8.89814 42.7633 8.07033 42.3052 7.20803 41.8268C6.74028 41.5681 6.5165 41.2539 6.28095 40.9652C5.94192 40.5486 6.04539 40.1178 4.97951 39.7356C4.72628 39.4372 4.34098 39.13 4.25686 38.844C4.14496 38.4618 3.85557 38.0902 3.55103 37.7062C3.22209 37.286 3.05804 36.8526 3.06141 36.4501C3.06141 36.0749 2.51795 35.6865 2.5945 35.3167C2.62395 35.1843 2.16546 34.9927 2.00898 34.8259C1.89457 34.7076 1.86176 34.5778 1.887 34.4648C1.91223 34.351 2.08638 34.2662 2.00309 34.1259C1.64723 33.5318 1.38896 32.9404 0.976743 32.3472C0.789981 32.0753 0.741188 31.8467 1.01208 31.6392C1.0533 31.6066 1.08358 31.566 1.08022 31.5262C1.04321 31.242 0.871584 30.9357 0.986839 30.6762C1.10714 30.4078 1.34017 30.1571 1.31662 29.8658C1.30904 29.7431 1.29726 29.6213 1.24763 29.4951C0.857284 28.4791 0.88168 28.3255 1.39822 27.5928C1.55217 27.373 1.55469 27.1241 1.71622 26.9043C1.95935 26.575 2.22603 26.2431 3.21452 26.1451C3.30706 26.2705 3.39792 26.3067 3.41811 26.2422C3.42231 26.229 3.24312 26.1884 3.1489 26.1601C3.04458 25.9915 2.99663 25.8203 2.81829 25.6543C2.22267 25.1 2.52552 24.6604 2.99495 24.2446C3.14806 24.1096 3.36006 23.9772 3.64862 23.8862C4.58663 23.5949 5.07625 23.218 4.85668 22.6672C4.79443 22.5057 4.91136 22.3476 5.03166 22.2064C5.5482 21.5956 6.09251 20.99 6.92452 20.4533C7.31656 20.2009 7.75654 19.9705 8.49517 19.8345C9.47273 19.6545 10.2475 19.3932 10.7346 19.0162C10.8928 18.8935 11.3185 18.8397 11.6087 18.7479C11.7433 18.7046 11.5885 18.6446 11.4051 18.5466C10.8036 18.2271 10.6867 18.0099 11.183 17.8784C12.2464 17.5977 12.7074 17.1484 13.2584 16.7185C13.8507 16.2595 14.1687 15.7131 15.5972 15.5118C15.6645 15.503 15.6561 15.443 15.6712 15.4059C15.8454 14.9292 16.849 14.8736 18.0259 14.9133C18.3565 14.9248 18.7275 14.9884 19.0363 14.9813C19.5949 14.9698 19.992 14.863 20.1569 14.6732C20.2502 14.5655 20.326 14.4499 20.3234 14.329C20.3159 13.9114 20.4378 13.5336 21.3733 13.3262C21.598 13.2768 21.6686 13.1399 21.7502 13.0314C21.8941 12.8416 22.1389 12.6853 22.6024 12.6068C23.6145 12.4346 24.1865 12.0877 24.9546 11.8211C26.0045 11.4583 26.8778 11.0311 28.2818 10.8078C28.7992 10.7257 29.1416 10.5235 29.4714 10.3487C30.0207 10.0583 30.9049 9.9886 31.9119 9.99743C32.3477 10.001 32.8213 10.061 33.2571 10.0672C33.4506 10.0707 33.6382 10.0213 33.7551 9.97006C33.8738 9.9171 33.9032 9.83236 33.9713 9.76174C34.5249 9.18708 35.415 8.73513 36.899 8.47119C37.5139 8.36262 37.9901 8.17459 38.5243 8.02012C38.7531 7.95391 38.9172 7.8321 39.1982 7.82062C41.1196 7.73676 42.2957 7.22125 44.0624 7.04647C44.7876 6.97409 45.4025 6.89111 46.2387 7.17182C46.3447 7.20713 46.6855 7.18418 46.815 7.14534C47.0371 7.08001 47.1776 6.98115 47.3517 6.89641C47.4275 6.89023 47.5158 6.89023 47.5806 6.87875C47.6193 6.87169 47.6243 6.84433 47.6428 6.82756C47.5663 6.85933 47.4872 6.89199 47.4106 6.92465C47.271 6.84697 47.0792 6.77194 46.9984 6.6925C46.8167 6.5133 46.8049 6.32087 47.2331 6.27762C47.949 6.20523 48.4496 6.05517 48.8904 5.86097C49.921 5.40637 51.3789 5.18657 53.1287 5.13625C54.299 5.10271 55.4666 5.06916 56.6385 5.03915C56.9002 5.03209 57.0011 4.98619 56.9616 4.88379C56.8917 4.6993 57.06 4.55189 57.4916 4.52982C58.3396 4.48745 59.0816 4.39211 59.7689 4.24558C60.0911 4.17761 60.5454 4.16613 60.9694 4.16437C61.4136 4.16172 61.8325 4.16172 62.0916 4.03902C62.7773 3.71418 63.8019 3.56588 64.9856 3.53234C65.9867 3.50409 66.7969 3.38492 67.395 3.13864C67.9309 2.91796 68.6148 2.78732 69.5091 2.77584C71.6838 2.75289 73.5051 2.42981 75.6571 2.38921C75.8615 2.38479 76.071 2.35301 76.1964 2.30535C76.6178 2.14204 77.2084 2.08908 77.8419 2.06172C79.1038 2.0061 80.359 1.94784 81.3458 1.69892C84.3045 1.40673 87.2809 1.13132 90.4735 1.02892C91.8482 0.984789 93.2296 0.9433 94.5781 0.873566C98.3361 0.681133 102.218 0.638761 106.241 0.770286C108.022 0.82943 109.825 0.92388 111.617 1.00068C112.947 1.05629 112.895 1.07571 114.228 1.61682C114.798 1.84986 115.272 2.04671 115.188 2.308C115.09 2.60548 115.245 2.86764 116.023 3.13864C116.266 3.2225 116.388 3.38051 116.478 3.50409C116.634 3.71506 116.672 3.92603 116.847 4.13789C117.124 4.4795 116.695 4.67017 116.308 4.87585C116.22 4.87761 116.12 4.87408 116.051 4.88556C116.008 4.89174 116.011 4.9244 115.993 4.9447C116.079 4.91292 116.165 4.88114 116.251 4.84936C116.566 4.9244 116.887 4.9959 117.191 5.07711C117.28 5.10006 117.398 5.17156 117.376 5.18921C117.298 5.24836 117.19 5.34457 117.053 5.3384C115.828 5.28102 114.585 5.18392 113.369 5.13802C110.583 5.03209 107.874 5.0365 105.213 5.10006C104.258 5.12301 103.287 5.13007 102.349 5.16715C102.064 5.1795 101.86 5.26866 101.62 5.32251L101.683 5.30927C100.295 5.21835 99.1134 5.32692 97.9508 5.4558C97.6975 5.99603 96.158 5.80271 95.1636 5.8901C92.5851 6.11872 89.925 6.28556 87.2809 6.46211C86.5768 6.50801 85.8802 6.60334 85.0558 6.50095C83.9916 6.36765 83.4952 6.61923 82.781 6.72339L82.8331 6.75341C82.4588 6.53008 82.4588 6.52919 82.06 6.65984L82.1155 6.64483C81.6814 6.64395 81.1834 6.60158 80.8318 6.65101C80.3775 6.71545 80.1083 6.90347 79.6346 6.94319C79.2712 6.9732 78.8245 6.91406 78.4939 7.02529C78.0673 7.16652 77.5491 7.28128 76.9888 7.35631C75.1027 7.61318 73.188 7.8524 71.2724 8.09074C68.8798 8.38645 66.5049 8.69099 64.3117 9.11205C63.1786 9.32832 61.8679 9.44925 60.6598 9.62756C59.7319 9.76439 58.8342 9.91974 57.9307 10.0716C57.3881 10.1625 56.8573 10.2605 56.3197 10.3549C55.3354 10.5271 54.3082 10.678 53.3736 10.8775C51.2485 11.3303 49.147 11.7964 47.0741 12.2757C44.9196 12.7745 42.7752 13.2785 40.6939 13.8117C39.3344 14.1595 38.0919 14.5611 36.8031 14.9416C35.9702 15.1887 35.1331 15.4333 34.328 15.691C30.7409 16.8447 27.4927 18.1212 24.4633 19.4823C22.5444 20.3447 20.8433 21.2663 19.3232 22.2488C18.7873 22.5948 18.0638 22.8896 17.6129 23.263C16.1903 24.4441 14.533 25.5696 13.4326 26.8284C13.3072 26.9714 13.0809 27.0994 13.0237 27.2521C12.6687 28.2275 11.7652 29.1111 11.6508 30.1271C11.623 30.3681 11.4825 30.595 11.4001 30.8289C11.2604 31.219 11.072 31.603 11.0005 32.002C10.7515 33.4011 10.7792 34.8276 11.2116 36.2965C11.5456 37.429 11.9907 38.5669 12.9531 39.7241C13.3409 40.1946 13.6757 40.6642 14.0232 41.1338C14.8703 42.2814 16.0666 43.3283 17.9023 44.5297C18.2144 44.7345 18.5189 44.9428 18.7974 45.1502C19.3576 45.5678 19.886 45.9879 20.7727 46.3578C20.9434 46.4284 21.0915 46.5105 21.2118 46.5926C22.4426 47.4303 24.2345 48.1259 26.0163 48.8259C27.2656 49.3167 28.5367 49.8093 29.3275 50.4104C29.5749 50.5975 29.961 50.7026 30.4229 50.7829C30.873 50.8597 31.3256 50.9312 31.7756 51.0062C32.1517 51.0698 32.1677 51.0751 31.8682 51.2587C31.7294 51.3426 31.7723 51.3902 32.0861 51.4591C32.7709 51.6127 33.4169 51.4476 34.0841 51.6392C34.7966 51.8448 35.5597 52.0479 35.9223 52.3639C36.1915 52.5996 36.5927 52.7673 37.2111 52.8432C38.1558 52.9606 38.6597 53.1936 38.8734 53.5308C38.9374 53.6324 39.1813 53.7038 39.4076 53.6694C40.1833 53.5503 40.847 53.6209 41.4359 53.9793C41.568 54.0587 41.7489 54.1329 41.9163 54.2079C42.3235 54.3888 42.4286 54.4109 43.0789 54.3235C43.4752 54.2723 43.8369 54.2361 44.3249 54.3659C45.2637 54.6157 46.2143 54.8549 47.1431 55.1091C47.3307 55.1604 47.4493 55.2575 47.5982 55.3334C47.5175 55.3351 47.4258 55.3298 47.3559 55.3378C47.313 55.3431 47.303 55.3687 47.2777 55.3854C47.366 55.359 47.4535 55.3325 47.5393 55.3051C47.6487 55.3042 47.7648 55.3095 47.8649 55.3016C49.057 55.2098 50.0791 55.3757 50.8329 55.8727C51.1206 56.0616 51.4555 56.1517 51.9611 56.1675C52.7485 56.1931 53.5477 56.2399 54.304 56.4597C54.9408 56.6433 55.6239 56.7148 56.3079 56.8058C60.6312 57.3875 64.957 57.9674 69.2963 58.4291C70.0896 58.5138 70.9519 58.5986 71.656 58.7769C72.4754 58.9843 73.2435 58.8554 73.9939 59.0682C74.7368 59.2792 75.2819 59.1114 75.933 59.1459C78.186 59.2677 80.3901 59.2739 82.6868 59.5078C83.4876 59.5899 84.2683 59.6552 85.0423 59.6464C86.9983 59.6252 89.0527 59.762 91.0709 59.8803C92.8914 59.9862 94.6168 59.9942 96.3624 60.01C97.5688 60.0215 98.7575 60.0312 100.037 60.1389C101.378 60.2519 102.69 60.2228 104.03 60.2881C104.427 60.3075 104.597 60.2404 104.857 60.1981C105.216 60.1389 105.586 60.0648 106.001 60.0648C108.837 60.0657 111.484 59.8556 114.371 59.9112C115.136 59.9262 115.85 59.8573 116.576 59.8176C117.408 59.7726 118.203 59.6914 119.059 59.6728C120.019 59.6534 121.089 59.739 121.993 59.679C122.9 59.619 123.662 59.4451 124.575 59.3665C126 59.243 127.511 59.2359 129.07 59.2792C129.884 59.3012 130.591 59.265 131.138 59.1044C132.333 58.7539 133.804 58.6736 135.592 58.7733C136.924 58.8484 138.206 58.7866 139.498 58.7733C139.846 58.7689 139.986 58.6674 139.886 58.5244C139.672 58.2199 139.994 58.0469 140.663 58.001C141.88 57.9153 142.996 57.7344 144.416 57.8297C144.701 57.8491 145.005 57.775 145.208 57.7079C146.315 57.3407 147.598 57.0926 149.384 57.1606C149.585 57.1686 149.821 57.135 149.921 57.082C150.418 56.819 151.238 56.7987 152.161 56.8234C152.823 56.8402 153.454 56.8049 154.111 56.8102C154.478 56.8128 154.75 56.7678 154.842 56.6601C155.162 56.2814 155.947 56.0846 156.78 55.886C157.605 55.6882 158.782 55.7023 159.469 55.4349C160.307 55.4031 161.149 55.3784 161.978 55.3395C162.333 55.3237 162.37 55.2124 162.336 55.0791C162.316 55.0032 162.363 54.9105 162.492 54.8752C162.956 54.7455 163.496 54.6484 163.952 54.516C164.818 54.2653 165.811 54.1223 167.112 54.1735C167.55 54.1902 167.958 54.1435 168.366 54.1143C168.891 54.0772 168.536 53.9528 168.32 53.8477C168.135 53.7559 168.095 53.6774 168.25 53.6235C168.951 53.3817 169.924 53.2519 170.425 52.9235C170.554 52.837 170.898 52.7902 171.196 52.7752C171.967 52.7381 172.424 52.5581 172.969 52.408C173.249 52.3321 173.773 52.3621 174.187 52.3453C174.174 52.4327 174.161 52.521 174.15 52.6093C173.695 52.6728 173.695 52.6719 174.123 52.8414C174.141 52.9191 174.131 52.9968 174.183 53.0753C174.28 53.221 174.456 53.266 174.881 53.266C175.083 53.2651 175.274 53.2492 175.469 53.2413C175.565 53.3746 175.659 53.409 175.701 53.3366C175.704 53.326 175.512 53.2828 175.411 53.2545C175.225 52.9685 174.617 52.9253 174.057 52.8547C174.066 52.7637 174.075 52.6711 174.084 52.5793C174.548 52.5342 174.548 52.5351 174.117 52.3586C174.214 52.1591 174.426 51.9993 175.031 51.9799C175.664 51.9578 176.298 51.941 176.933 51.9225C177.452 51.9066 177.554 51.7839 177.206 51.58C176.712 51.2905 176.694 51.2508 176.987 51.1678C177.753 50.9497 178.453 50.7043 179.705 50.7714C180.295 50.8032 179.985 50.6514 179.763 50.5375C179.691 50.4996 179.591 50.4342 179.62 50.4166C180.224 50.09 180.836 49.7607 181.773 49.5612C182.725 49.3582 183.39 49.0466 184.016 48.7359C184.713 48.3898 185.488 48.0747 186.263 47.7569C187.424 47.2803 188.603 46.8106 189.448 46.2272C189.817 45.9738 190.421 45.7823 190.9 45.5572C191.26 45.3895 191.709 45.2367 191.914 45.0319C192.276 44.6691 192.888 44.4176 193.742 44.2216C194.404 44.0698 194.758 43.8156 194.783 43.4625C194.806 43.142 195.189 42.8631 195.748 42.6698C196.359 42.4597 196.533 42.1807 196.584 41.8533C196.642 41.4922 196.84 41.1594 197.45 40.9079C197.905 40.7207 198.089 40.4585 198.268 40.1964C198.445 39.9404 198.875 39.7294 198.996 39.4655C199.15 39.1256 200.241 39.1194 200.402 38.7999C200.494 38.8008 200.597 38.8087 200.675 38.7999C200.723 38.7937 200.73 38.7628 200.756 38.7425C200.656 38.7708 200.554 38.7973 200.454 38.8264C200.363 38.7902 200.214 38.7549 200.191 38.7205C199.936 38.3435 200.098 38.0002 200.004 37.6338C199.976 37.5191 200.205 37.4273 200.3 37.3205C200.72 36.8588 201.102 36.3874 201.561 35.9346C201.749 35.751 201.712 35.5674 201.587 35.3484C201.466 35.1428 201.489 34.9309 201.574 34.7429C201.741 34.3633 202.251 34.0349 201.853 33.5777C202.022 33.3199 202.302 33.0745 202.336 32.7991C202.442 31.9597 202.797 31.144 202.157 30.2277C202.04 30.0618 202.111 29.8976 202.108 29.7343C202.092 28.9195 201.821 28.0854 201.541 27.2503C201.499 27.1232 201.53 26.989 201.381 26.8716C200.46 26.1443 200.543 25.431 199.84 24.7045C199.021 23.8562 198.39 23.0017 197.616 22.1517C197.269 21.7703 196.817 21.3881 196.15 21.0289C194.607 19.6236 191.842 18.4716 188.963 17.3479C186.081 16.2233 186.004 16.2136 182.175 15.2285C181.439 15.0387 180.717 14.8374 179.981 14.645C179.669 14.5638 179.344 14.4578 179.023 14.4199C177.056 14.1886 175.233 13.7243 173.33 13.3906C170.968 12.9766 168.624 12.5715 166.216 12.3119C165.881 12.2757 165.523 12.2192 165.211 12.1433C163.566 11.7417 161.834 11.6013 160.132 11.3895C159.688 11.3339 159.237 11.3365 158.793 11.3189C158.347 11.3003 157.907 11.3162 157.461 11.2721C156.204 11.1459 154.943 10.964 153.697 10.8625C152.454 10.7619 151.265 10.8078 149.982 10.64C148.813 10.4865 147.767 10.5677 146.72 10.6056C146.511 10.6136 146.627 10.8475 146.253 10.8413C145.487 10.8281 144.703 10.8078 143.918 10.7451C143.664 10.7239 143.379 10.5015 143.105 10.4706C142.68 10.4238 142.162 10.4141 141.843 10.4732C141.225 10.5906 140.708 10.7592 139.78 10.5315C139.202 10.595 138.653 10.6577 137.906 10.4573C137.656 10.3902 137.142 10.3664 136.955 10.4176C135.945 10.6824 134.498 10.5597 133.288 10.6418C132.379 10.7036 131.362 10.6807 130.369 10.6648C129.472 10.6515 128.558 10.5394 127.674 10.3223C127.017 10.1616 126.561 10.2269 126.252 10.3796C125.981 10.5156 125.666 10.5412 125.147 10.4291C124.815 10.3567 124.47 10.3214 124.177 10.3761C123.825 10.4414 123.452 10.4979 123.133 10.5791C122.293 10.7919 121.31 10.8493 120.101 10.7469C119.431 10.6904 118.78 10.7292 118.108 10.6939C117.426 10.6586 116.709 10.565 116.692 10.9216C116.689 10.972 116.383 10.9958 116.196 11.017C114.816 11.1723 113.261 11.1388 111.705 11.0964C111.534 11.0911 111.255 11.0099 111.129 10.9428C110.831 10.7839 110.901 10.5518 111.213 10.5129C111.499 10.4785 111.776 10.4308 112.087 10.4229C112.729 10.4097 113.398 10.4291 114.042 10.4176C115.36 10.3947 116.521 10.2772 117.195 9.88444L117.116 9.89415C117.794 9.96476 118.458 10.031 119.11 10.0071C119.624 9.98772 120.193 10.0213 120.737 10.0336C121.17 10.0424 121.695 10.1069 122.025 10.0557C122.781 9.9374 123.679 9.98595 124.508 9.95505C125.017 9.9374 125.104 9.76703 124.744 9.52164C124.684 9.48015 124.562 9.41571 124.592 9.40158C125.075 9.16678 125.7 9.00436 126.689 9.07586C127.247 9.11735 127.816 9.19238 128.379 9.25329C128.397 9.33538 128.403 9.41659 128.433 9.49868C128.478 9.62844 128.628 9.66817 128.818 9.59755C128.869 9.57901 128.85 9.51192 128.791 9.47927C128.654 9.40423 128.473 9.33714 128.309 9.26653C128.469 9.22857 128.606 9.15972 128.796 9.15795C129.768 9.15354 130.764 9.17472 131.735 9.1659C132.271 9.16236 132.776 9.11911 133.291 9.08998C133.582 9.07145 133.778 8.90991 133.585 8.82163C133.441 8.75719 133.181 8.67863 133.004 8.67069C132.45 8.64774 131.895 8.64067 131.368 8.65391C130.51 8.67598 129.659 8.64067 128.733 8.4862C128.509 8.44824 128.222 8.61331 127.95 8.58948C127.498 8.55064 127.054 8.48002 126.631 8.51709C126.332 8.54357 126.009 8.55152 125.697 8.57006C124.664 8.62743 123.667 8.71747 122.503 8.6345C121.507 8.56299 120.494 8.47031 119.643 8.61596C119.561 8.63008 119.182 8.53475 119.093 8.47296C119.02 8.41999 119.115 8.32113 119.232 8.28317C119.367 8.23903 119.615 8.24256 119.807 8.2205C120.869 8.09868 122.224 8.24256 123.208 8.04483C123.365 8.01394 123.631 8.03601 123.85 8.04483C127.782 8.20902 131.487 8.07926 135.271 8.05454C136.349 8.04748 137.46 8.07838 138.565 8.10574C139.383 8.12604 140.236 8.48355 139.971 8.76073C139.663 9.0838 140.221 9.41659 140.302 9.7379C140.31 9.76968 140.488 9.84471 140.531 9.84295C141.632 9.80587 143.149 10.1643 143.818 9.70966C143.864 9.67876 143.958 9.66111 144.034 9.63904C144.671 9.4572 145.403 9.36275 146.408 9.48897C147.336 9.60638 148.231 9.64345 149.027 9.54988C149.159 9.53488 149.207 9.45278 149.248 9.39364C149.256 9.3804 149.078 9.31331 148.98 9.30095C148.184 9.19503 147.386 9.10499 146.593 8.99465C145.671 8.86665 144.807 8.79957 143.932 8.84812C143.225 8.88695 142.414 8.83752 141.636 8.80663C141.509 8.80133 141.226 8.68481 141.198 8.6292C141.167 8.56035 141.278 8.47031 141.427 8.44648C142.069 8.3379 142.851 8.35732 143.619 8.35908C143.918 8.35908 144.16 8.28229 144.428 8.2408L144.358 8.25404C144.809 8.29023 145.267 8.33702 145.713 8.35732C146.166 8.37939 146.501 8.24963 146.452 8.07749C146.416 7.95391 146.312 7.82504 146.235 7.69881C146.026 7.35189 146.031 7.35013 147.283 7.37926L147.219 7.34925C148.183 7.75177 148.305 7.76678 149.364 7.60788L149.289 7.61671C149.928 7.68027 150.571 7.75442 151.206 7.80385C151.479 7.82592 151.579 7.76854 151.478 7.70852C151.42 7.67321 151.318 7.6326 151.227 7.61936C150.591 7.52667 149.951 7.44017 149.313 7.35101L149.373 7.38544C149.636 7.34218 149.871 7.27068 150.168 7.26362C150.472 7.25568 150.837 7.3007 151.175 7.33954C152.641 7.50549 154.125 7.75442 155.538 7.68203C156.44 7.79326 157.343 7.89742 158.244 8.02012C158.443 8.04748 158.674 8.12869 158.81 8.20108C159.198 8.41028 159.495 8.42352 159.849 8.29641C159.964 8.25492 160.239 8.2611 160.451 8.2717C160.786 8.29023 161.181 8.32819 161.381 8.46325C161.579 8.59742 161.382 8.68305 161.147 8.75101C161.02 8.78809 160.962 8.85429 160.874 8.90726C161.082 8.95493 161.292 9.02201 161.5 9.04585C161.833 9.08469 162.171 9.09881 162.501 9.11293C162.756 9.12353 162.89 9.06968 162.882 8.97523C162.878 8.8949 162.837 8.81016 162.835 8.72983C162.829 8.59212 163.125 8.52857 163.465 8.60978C165.19 9.02113 167.005 9.22857 168.802 9.48191C169.286 9.549 169.652 9.66375 169.886 9.84295L169.948 9.83147C169.499 9.79528 169.048 9.75644 168.602 9.72731C168.506 9.72025 168.337 9.74938 168.347 9.7688C168.383 9.84295 168.421 9.93917 168.559 9.98948C169.342 10.2755 169.664 10.2976 170.63 10.166L170.572 10.1793C171.262 10.1086 171.966 10.0619 172.805 10.1819C173.369 10.2622 173.936 10.332 174.5 10.4061C175.215 10.4997 175.804 10.6595 176.244 10.9181C176.468 11.0505 176.81 11.0964 177.159 11.1141C177.484 11.13 177.86 11.0938 178.131 11.2218C178.999 11.6349 180.307 11.8388 181.166 12.2952C182.05 12.7639 183.504 13.0561 184.822 13.2785C186.311 13.5283 187.671 13.8108 188.863 14.2795C189.112 14.3775 189.511 14.419 189.818 14.502C190.241 14.6167 190.606 14.7721 190.715 14.9433C190.787 15.059 190.695 15.1799 190.595 15.2797C190.466 15.4085 190.623 15.5295 190.903 15.6283C191.551 15.8587 192.237 16.0759 192.906 16.2983L192.856 16.2692C192.783 16.3398 192.719 16.4104 192.637 16.4784C192.503 16.5879 192.525 16.7194 192.828 16.8227C193.772 17.1431 194.896 17.3682 195.751 17.7495C196.037 17.8775 196.595 17.9499 197.036 18.0161C197.602 18.1009 198.207 18.1415 198.686 18.318C198.935 18.4089 199.129 18.544 199.226 18.6605C199.267 18.7099 199.031 18.792 198.854 18.807C198.46 18.8397 198.019 18.8353 197.605 18.8529C197.507 18.8573 197.444 18.8927 197.364 18.9138C197.439 18.9439 197.511 18.9924 197.591 19.003C198.934 19.1795 199.829 19.6165 200.882 19.9616L200.827 19.9334C200.956 20.0799 201.198 20.1982 201.557 20.2909L201.498 20.2609C201.228 20.4533 200.911 20.6343 201.357 20.9282C201.541 21.0474 201.618 21.1789 201.786 21.3016C202.034 21.4852 201.937 21.6282 201.807 21.7695C201.672 21.916 201.975 21.9999 202.309 22.0775C202.615 22.1464 202.908 22.2046 203.077 22.3476C203.763 22.9294 203.77 22.932 205.559 23.1315C205.85 23.1651 206.178 23.3513 206.088 23.4378C205.978 23.5384 205.861 23.6391 205.701 23.7247C205.471 23.8509 205.413 23.9913 205.595 24.174C205.76 24.3408 205.929 24.5086 206.039 24.6763C206.189 24.9076 206.664 24.9093 207.074 24.9826C207.27 25.0179 207.479 25.1062 207.595 25.1821C207.707 25.2545 207.759 25.3498 207.738 25.4204C207.71 25.5105 207.504 25.5122 207.253 25.4654C207.038 25.4248 206.797 25.3763 206.597 25.3745C206.411 25.3728 206.125 25.4081 206.117 25.4584C206.085 25.6914 206.192 25.943 206.129 26.1716C206.087 26.3376 206.047 26.4815 206.483 26.6359C207.101 26.8557 207.727 26.9378 208.344 26.8354C208.431 26.8204 208.49 26.7895 208.562 26.7666L208.496 26.7763C209.333 26.9784 209.715 27.2459 209.754 27.5584C209.768 27.6793 209.809 27.8135 209.714 27.9141C209.228 28.4349 209.597 29.0061 210.213 29.6019C210.425 29.8076 210.567 30.0159 210.743 30.2242C210.28 30.5349 210.774 30.9383 210.864 31.3003C210.953 31.6542 210.635 31.904 210.14 32.1265C210.047 32.1238 209.946 32.115 209.867 32.1221C209.822 32.1265 209.812 32.1583 209.784 32.1777C209.884 32.1512 209.984 32.1247 210.084 32.0974C210.275 32.1592 210.52 32.2121 210.646 32.2854C210.839 32.3984 211.144 32.5749 211.06 32.6376C210.639 32.9492 210.65 33.2996 210.989 33.6942C211.367 34.132 211.239 34.5213 211.058 34.9018C211.004 35.0086 210.817 35.1039 210.614 35.1737C210.386 35.2505 210.01 35.194 209.675 35.1472C209.413 35.1101 209.236 35.1304 209.219 35.231C209.186 35.427 209.171 35.6274 209.173 35.8286C209.173 35.9549 209.341 36.0317 209.823 36.074C210.178 36.1058 210.54 36.1429 210.726 36.2638C210.899 36.3768 210.978 36.5145 210.985 36.631C210.996 36.7493 210.933 36.8738 210.783 36.9603C210.34 37.2181 210.259 37.5023 210.604 37.8739C210.787 38.0681 210.637 38.272 210.635 38.4706C210.635 38.664 210.415 38.7081 209.787 38.6437C209.03 38.5651 208.913 38.5722 208.88 38.7452C208.797 39.1795 208.736 39.6155 208.668 40.0516C208.492 40.0781 208.266 40.0878 208.152 40.1355C207.991 40.2043 208.092 40.2917 208.351 40.3332C208.398 40.3411 208.51 40.2917 208.531 40.259C208.579 40.1858 208.587 40.1046 208.613 40.0287C208.834 40.0701 209.066 40.1046 209.277 40.1567C209.708 40.2626 209.849 40.3703 209.729 40.4833C209.544 40.6545 209.348 40.824 209.16 40.9952C209.032 41.1144 209.032 41.1144 208.324 40.8619C208.028 40.756 207.577 40.7454 207.472 40.8408C207.176 41.1135 207.007 41.4128 206.638 41.6749C206.335 41.8921 206.392 42.2046 206.288 42.4756L206.337 42.4606C206.174 42.4994 205.93 42.5179 205.865 42.578C205.498 42.9196 205.156 43.2665 204.849 43.6205C204.801 43.6796 204.908 43.7988 205.049 43.8579C205.15 43.8994 205.433 43.8888 205.627 43.8906C205.732 43.8923 205.814 43.8659 205.915 43.8588C206.528 43.8226 206.782 43.9082 206.752 44.1263C206.74 44.2057 206.741 44.2887 206.692 44.3611C206.584 44.5156 206.351 44.6259 205.832 44.5968C205.5 44.5791 205.155 44.5376 204.82 44.52C204.128 44.4829 203.55 44.6047 203.447 44.8386C203.348 45.0673 203.335 45.3091 203.284 45.5457C203.117 45.5766 202.9 45.5925 202.793 45.6437C202.637 45.7152 202.74 45.7973 202.993 45.8317C203.037 45.8379 203.125 45.7849 203.146 45.7496C203.188 45.6763 203.198 45.596 203.222 45.5192C203.443 45.5616 203.67 45.5995 203.885 45.6472C204.248 45.7275 204.424 45.8423 204.441 45.9782C204.47 46.2016 204.193 46.3428 203.732 46.4302C203.362 46.499 202.92 46.4823 202.458 46.4381C202.427 46.4055 202.407 46.3719 202.36 46.341C202.334 46.3234 202.266 46.3101 202.218 46.2951C202.318 46.3375 202.418 46.379 202.521 46.4231C202.336 46.59 201.699 46.6844 201.919 46.9042C202.445 47.4268 201.914 47.6687 200.958 47.8443C200.514 47.9255 200.269 48.0844 200.163 48.2777C200.025 48.5267 199.513 48.6211 198.883 48.6617C198.175 48.7059 197.479 48.765 196.673 48.7094C196.393 48.69 196.305 48.7588 196.391 48.8559C196.575 49.0651 196.786 49.2752 196.93 49.4844C196.98 49.5568 196.928 49.6539 196.806 49.6936C196.233 49.8772 195.497 49.9902 195.106 50.2542C194.908 50.3883 194.619 50.3574 193.956 50.203C193.747 50.1544 193.547 50.0961 193.336 50.0511C193.005 49.9823 192.733 50.0688 192.838 50.2144C192.899 50.2974 193.007 50.383 193.093 50.466C192.994 50.4642 192.881 50.4537 192.8 50.4634C192.749 50.4687 192.748 50.5066 192.722 50.5287C192.913 50.5666 193.02 50.5384 193.044 50.4431C193.536 50.6302 193.742 50.827 193.594 51.0283C193.439 51.2384 192.878 51.3708 193.163 51.6639C193.202 51.7045 193.246 51.7777 193.204 51.7839C192.247 51.9358 191.528 52.2677 190.109 52.0788C190.082 52.0408 190.069 52.0002 190.016 51.9649C189.985 51.9446 189.888 51.9322 189.822 51.9154C189.938 51.9649 190.056 52.0143 190.172 52.0637C190.174 52.265 190.103 52.4636 190.201 52.6702C190.29 52.8556 190.272 52.9738 189.881 53.0648C189.571 53.1371 189.457 53.2996 189.192 53.3975C189.002 53.4699 188.741 53.5335 188.452 53.5476C187.158 53.6103 186.195 53.838 185.474 54.1832C185.002 54.4091 184.603 54.659 184.142 54.8885C183.786 55.065 183.249 55.1577 182.659 55.2221C182.417 55.2486 181.916 55.2001 181.731 55.0844C181.339 54.8399 180.918 54.7605 180.307 54.7993C179.143 54.8726 178.243 55.0791 177.518 55.3722C177.338 55.4446 177.336 55.5832 177.252 55.6917L177.318 55.6741C176.625 55.6044 175.966 55.6061 175.594 55.7747C174.94 56.0722 174.084 56.2823 173.307 56.5268C173.245 56.5462 173.232 56.5913 173.226 56.6274C173.223 56.6628 173.235 56.706 173.286 56.7413C173.333 56.774 173.446 56.8225 173.517 56.8269C174.052 56.8587 174.586 56.8817 175.122 56.9073L175.072 56.8825Z"
+                          fill="#F6BA2E"
+                        />
+                      </mask>
+                      <g mask="url(#mask0_631_239)">
+                        <path
+                          d="M118.303 1.76357C118.303 1.76357 12.6188 0.7705 5.88868 29.9005C-0.84148 59.0304 89.1744 61.6786 111.047 60.7959C132.92 59.9132 189.706 63.0027 204.849 35.1968C222.588 2.62423 118.624 13.7766 112.099 16.4389"
+                          stroke="#FFD470"
+                          stroke-width="16"
+                        />
+                      </g></svg></span>
+                </h2>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Fitness -->
 
-                                        ​</li>
-                                    <li class="xb-item--contact" style="font-size: medium;"><span><img src="assets/img/icon/footer-icon02.svg" alt=""></span>vishalsbhuta10@gmail.com</li>
-                                </ul>
-                                <!-- <div class="xb-item--appstor pt-30">
+              <!-- Service Box -->
+
+              <div class="col-lg-4 col-md-6">
+                <div class="xb-services mb-30">
+                  <div class="xb-item--holder" onclick="openPopup(this)">
+                    <h3 class="xb-item--title">Fitpaa Disease Management</h3>
+                    <p class="xb-item--content short-text">
+                      Manage chronic lifestyle diseases like diabetes,
+                      hypertension,
+                      <span class="extra-text"
+                        >thyroid, heart diseases, CPOD, and PCOD with the help
+                        of your Fitness Manager and Personalized Fitpaa Capsule.
+                        100000+ people have transformed their life with
+                        Fitpaa.</span
+                      >
+                    </p>
+                    <button
+                      class="read-more-btn"
+                      onclick="toggleText(this, event)"
+                    >
+                      Read More
+                    </button>
+
+                    <div class="xb-item--img">
+                      <img
+                        src="assets/img/appointments/appoint2.webp"
+                        alt="Fitness"
+                      />
+                      <img
+                        src="assets/img/appointments/appoint2.webp"
+                        alt="Fitness"
+                      />
+                    </div>
+                    <div
+                      class="hero-btn btns"
+                      style="display: flex; justify-content: center"
+                    >
+                      <p class="thm-btn1">₹6000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="xb-services mb-30" onclick="openPopup(this)">
+                  <div class="xb-item--holder">
+                    <h3 class="xb-item--title">Fitpaa Focussed Weight Loss</h3>
+                    <p class="xb-item--content">
+                      Lose 6kgs in 12 weeks with a fitness manager and a
+                      personalized Fitpaa capsule.
+                    </p>
+                    <div class="xb-item--img">
+                      <img
+                        src="assets/img/appointments/appoint1.png"
+                        alt="Fitness"
+                      />
+                      <img
+                        src="assets/img/appointments/appoint1.png"
+                        alt="Fitness"
+                      />
+                    </div>
+                    <div
+                      class="hero-btn btns"
+                      style="display: flex; justify-content: center"
+                    >
+                      <p class="thm-btn1">₹6000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+       
+            </div>
+          </div>
+        </section>
+        <!-- service section end  -->
+
+        <!-- cta section start  -->
+
+        <!-- cta section end  -->
+      </main>
+      <!-- main area end  -->
+
+      <!-- footer strt -->
+      <footer
+        class="footer bg_img pos-rel"
+        data-background="assets/img/bg/footer_bg.jpg"
+      >
+        <div class="xb-footer-wrap pt-10">
+          <div class="container">
+            <div class="xb-footer-inner footer-widget-wrap pt-50">
+              <div class="row xb-footer pb-50">
+                <div
+                  class="col-xl-4 col-lg-6 col-md-6 footer-col widget-top mt-30"
+                >
+                  <div class="footer-widget">
+                    <span class="xb-item--title">✍️ need help</span>
+                    <ul class="xb-item--holder list-unstyled">
+                      <li class="xb-item--contact" style="font-size: medium">
+                        <span
+                          ><img
+                            style="width: 18px; height: 18px"
+                            src="assets/img/icon/address.svg"
+                            alt=""
+                        /></span>
+                        Mumbai, Maharashtra, India. ​
+                      </li>
+                      <li class="xb-item--contact" style="font-size: medium">
+                        <span
+                          ><img
+                            src="assets/img/icon/footer-icon02.svg"
+                            alt="" /></span
+                        >vishalsbhuta10@gmail.com
+                      </li>
+                    </ul>
+                    <!-- <div class="xb-item--appstor pt-30">
                                     <span class="xb-item--text">🖥️   download app</span>
                                     <div class="xb-item--app_link">
                                         <a href="#!" class="xb-item--app_img"><img src="assets/img/footer/apps01.png" alt=""></a>
                                         <a href="#!" class="xb-item--app_img"><img src="assets/img/footer/apps02.png" alt=""></a>
                                     </div>
                                 </div> -->
-                            </div>
-                           
-                        </div>
-                        <div class="col-xl-2 col-lg-6 col-md-6 footer-col mt-30">
-                           <div class="footer-widget">
-                                <span class="xb-item--title">Quick Links</span>
-                                <ul class="xb-item--holder list-unstyled">
-                                    <li class="xb-item--list"><a href="about.html">About Us</a></li>
-                                    <li class="xb-item--list"><a href="services.html">Services</a></li>
-                                    <li class="xb-item--list"><a href="blog.html">Blogs</a></li>
-                                    <li class="xb-item--list"><a href="career.html">Career</a></li>
-                                    <li class="xb-item--list"><a href="contact.html">Contact</a></li>                                   
-                                </ul>
-                           </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-6 col-md-6 footer-col mt-30">
-                            <div class="footer-widget">
-                                <span class="xb-item--title">Services</span>
-                                <ul class="xb-item--holder list-unstyled">
-                                    <li class="xb-item--list"><a href="fitness.html">Fitness</a></li>
-                                    <li class="xb-item--list"><a href="mental-wellness.html">Mental Wellness</a></li>
-                                    <li class="xb-item--list"><a href="yoga.html">Yoga</a></li>
-                                    <li class="xb-item--list"><a href="meditation.html">Meditation</a></li>
-                                    <li class="xb-item--list"><a href="ayurveda.html">Ayurveda</a></li>
-                                    <li class="xb-item--list"><a href="diet-plan.html">Diet Plan</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                   <div class="col-xl-4 col-lg-6 col-md-6 footer-col mt-30">
-     <div class="footer-widget">
-        <div class="footer-widget footer-newslatter">
-            <h2 class="xb-item--title">Prioritize Your Health Naturally</h2>
-            <p class="xb-item--text">Learn how to improve your overall well-being through balanced nutrition, regular exercise, and holistic wellness practices.</p>            
-            <p class="xb-item--text">Stay informed with expert insights on leading a healthier, more energetic life. Explore our resources on natural remedies, fitness, and mindful living.</p>            
-    </div>
-</div>
-</div>
-
-                        </div>
-                        <div class="footer-bottom ul_li_between">
-                            <div class="copyright mt-15">
-                                <p>Copyright © 2024 <a href="index.html">Health One Place</a>. Designed and Developed by <a href="https://www.spritegenix.com/">Sprite Genix</a>. All rights reserved.</p>
-                            </div>
-                            <div class="social-link ul_li mt-15">
-                                <p>Follow us :</p>
-                                <a href="https://twitter.com/BeatheVirus"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                                  </svg></a>
-                                  <a href="https://www.youtube.com/channel/UCckDLHirLflLKlUHpRXvOvA"><i class="fab fa-youtube"></i></a>
-                                <a href="https://www.facebook.com/ImmunityBoosters1"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/company/beat-the-virus/"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/beatthevirusstartup/"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        
+                  </div>
                 </div>
+                <div class="col-xl-2 col-lg-6 col-md-6 footer-col mt-30">
+                  <div class="footer-widget">
+                    <span class="xb-item--title">Quick Links</span>
+                    <ul class="xb-item--holder list-unstyled">
+                      <li class="xb-item--list">
+                        <a href="about.html">About Us</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="services.html">Services</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="blog.html">Blogs</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="career.html">Career</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="contact.html">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-6 col-md-6 footer-col mt-30">
+                  <div class="footer-widget">
+                    <span class="xb-item--title">Services</span>
+                    <ul class="xb-item--holder list-unstyled">
+                      <li class="xb-item--list">
+                        <a href="fitness.html">Fitness</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="mental-wellness.html">Mental Wellness</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="yoga.html">Yoga</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="meditation.html">Meditation</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="ayurveda.html">Ayurveda</a>
+                      </li>
+                      <li class="xb-item--list">
+                        <a href="diet-plan.html">Diet Plan</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 footer-col mt-30">
+                  <div class="footer-widget">
+                    <div class="footer-widget footer-newslatter">
+                      <h2 class="xb-item--title">
+                        Prioritize Your Health Naturally
+                      </h2>
+                      <p class="xb-item--text">
+                        Learn how to improve your overall well-being through
+                        balanced nutrition, regular exercise, and holistic
+                        wellness practices.
+                      </p>
+                      <p class="xb-item--text">
+                        Stay informed with expert insights on leading a
+                        healthier, more energetic life. Explore our resources on
+                        natural remedies, fitness, and mindful living.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-bottom ul_li_between">
+                <div class="copyright mt-15">
+                  <p>
+                    Copyright © 2024 <a href="index.html">Health One Place</a>.
+                    Designed and Developed by
+                    <a href="https://www.spritegenix.com/">Sprite Genix</a>. All
+                    rights reserved.
+                  </p>
+                </div>
+                <div class="social-link ul_li mt-15">
+                  <p>Follow us :</p>
+                  <a href="https://twitter.com/BeatheVirus"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-twitter-x"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                      /></svg
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/channel/UCckDLHirLflLKlUHpRXvOvA"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                  <a href="https://www.facebook.com/ImmunityBoosters1"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="https://www.linkedin.com/company/beat-the-virus/"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="https://www.instagram.com/beatthevirusstartup/"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
-    <!-- footer end -->
+      </footer>
+      <!-- footer end -->
+    </div>
 
-</div>
+    <!-- jquery include -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/parallaxie.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Popup Form -->
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popupImage" src="" alt="Service Image" />
+        <h3 id="popupTitle"></h3>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="tel" placeholder="Your Number" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
 
-<!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/parallaxie.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/main.js"></script>
+    <script>
+      function toggleText(button, event) {
+        event.stopPropagation(); // Stop the click event from triggering the popup
 
-</body>
+        let paragraph = button.previousElementSibling; // Get the <p> tag
+        let extraText = paragraph.querySelector('.extra-text');
 
+        if (
+          extraText.style.display === 'none' ||
+          extraText.style.display === ''
+        ) {
+          extraText.style.display = 'inline'; // Show full text
+          button.textContent = 'Read Less'; // Change button text
+        } else {
+          extraText.style.display = 'none'; // Hide extra text
+          button.textContent = 'Read More'; // Change button text
+        }
+      }
+
+      function openPopup(element) {
+        let title = element.querySelector('.xb-item--title').innerText;
+        let imageSrc = element.querySelector('.xb-item--img img').src;
+
+        document.getElementById('popupTitle').innerText = title;
+        document.getElementById('popupImage').src = imageSrc;
+
+        document.getElementById('popupOverlay').style.display = 'flex';
+      }
+
+      function closePopup() {
+        document.getElementById('popupOverlay').style.display = 'none';
+      }
+
+      // Close when clicking outside the form
+      document
+        .getElementById('popupOverlay')
+        .addEventListener('click', function (event) {
+          if (event.target === this) {
+            closePopup();
+          }
+        });
+    </script>
+  </body>
 </html>
